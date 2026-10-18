@@ -5,6 +5,12 @@ highlights them typographically – the way a code editor highlights syntax. A w
 (`<med-editor>`) built on CodeMirror 6 and Lit, running entirely in the browser, in German,
 English and French.
 
+<p align="center">
+  <img src=".github/assets/demo.gif" width="540" alt="A report is dictated into the text field; findings, anatomy, negated and suspected terms are highlighted as the text arrives, then the pointer opens term cards for ground-glass opacities and NSIP.">
+</p>
+
+<p align="center"><sub>Dictation fed in by a script; everything after the microphone is the real pipeline.</sub></p>
+
 > **Technology demo.** Not a medical device, not intended for reporting and not for patient data.
 
 ## What it does
