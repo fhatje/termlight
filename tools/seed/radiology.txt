@@ -1,0 +1,1251 @@
+# Source of public/packs/radiology.{de,en,fr}.json (CC0). Rebuild with: node tools/build-seed.ts
+#
+# The most common radiological findings and descriptors (image patterns, not diagnoses), plus the
+# core anatomy and modalities, in every supported language. One concept = one block:
+#
+#   @key | SYSTEM:code, ...
+#   de: Label | term; term; ... | definition
+#   en: Label | term; term; ...
+#   fr: Label | term; term; ...
+#
+# The key is the concept id in all languages, so "Milchglastrübung", "ground-glass opacity" and
+# "verre dépoli" are the same concept for the hover card, the research panel and the host app.
+#
+# Term prefixes:
+#   =term   matches in exactly this letter case only (abbreviations)
+#   ^term   international: also used untranslated in the other languages ("Crazy paving" in German
+#           and French reports). It is added to every language pack. May prefix the label too.
+#
+# Regular inflection is handled by the matcher (Pneumonien, nodules, pleuraux); list irregular
+# forms explicitly. "## type" starts a section.
+
+## finding
+
+# --- Thorax ---
+
+@ground-glass-opacity | RadLex:RID28531
+de: Milchglastrübung | Milchglas; Milchglasinfiltrat; Milchglasverdichtung; Milchglasareal; Milchglasverschattung; Milchglasmuster; milchglasartige Trübung; milchglasartige Verdichtung; milchglasartig; Ground-Glass-Opazität; ground glass opacity; =GGO | Dichteanhebung des Lungenparenchyms, in der Gefäße und Bronchialwände abgrenzbar bleiben.
+en: Ground-glass opacity | ground glass; ground-glass; ground-glass opacification; ground-glass attenuation; ground-glass change; =GGO
+fr: Verre dépoli | opacité en verre dépoli; plage de verre dépoli; hyperdensité en verre dépoli; aspect en verre dépoli
+
+@consolidation | RadLex:RID43255
+de: Konsolidierung | Konsolidation; pulmonale Konsolidierung; Konsolidierungsareal; konsolidierendes Infiltrat | Homogene Verdichtung des Lungenparenchyms, die Gefäße und Bronchialwände maskiert.
+en: Consolidation | airspace consolidation; consolidative opacity; airspace opacity; airspace disease
+fr: Condensation | condensation pulmonaire; condensation alvéolaire; condensation parenchymateuse; foyer de condensation
+
+@infiltrate
+de: Infiltrat | Infiltration; pulmonales Infiltrat; pneumonisches Infiltrat; Lungeninfiltrat | Unscharf begrenzte Verdichtung des Lungenparenchyms.
+en: Infiltrate | pulmonary infiltrate; infiltration
+fr: Infiltrat | infiltrat pulmonaire; infiltrat parenchymateux
+
+@nodule | RadLex:RID50149
+de: Nodulus | Noduli; Nodulus pulmonalis; Lungennodulus; Lungenrundherd; Rundherd; Lungenherd; pulmonaler Rundherd; Lungenknoten; Mikronodulus; Mikronoduli | Rundliche Verdichtung der Lunge bis 3 cm Durchmesser.
+en: Nodule | pulmonary nodule; lung nodule; micronodule
+fr: Nodule | nodule pulmonaire; micronodule
+
+@solid-nodule
+de: solider Nodulus | solider Rundherd; solider Herd | Nodulus, der das Lungenparenchym vollständig verdeckt.
+en: Solid nodule
+fr: Nodule solide
+
+@subsolid-nodule
+de: subsolider Nodulus | subsolider Rundherd; teilsolider Nodulus; teilsolider Rundherd; Milchglasnodulus; Milchglasherd | Nodulus mit Milchglasanteil (rein milchglasartig oder teilsolide).
+en: Subsolid nodule | part-solid nodule; ground-glass nodule; nonsolid nodule
+fr: Nodule subsolide | nodule mixte; nodule en verre dépoli; nodule semi-solide
+
+@mass
+de: Raumforderung | =RF; Tumorformation; raumfordernder Prozess; Raumforderungszeichen | Umschriebene Gewebsvermehrung mit verdrängender Wirkung; in der Lunge ab 3 cm.
+en: Mass | mass lesion; space-occupying lesion; tumour mass; tumor mass
+fr: Masse | processus expansif; lésion expansive; masse tumorale; syndrome de masse
+
+@opacity
+de: Verschattung | Transparenzminderung; Verdichtung; Verdichtungsareal; Verdichtungsherd | Areal verminderter Strahlentransparenz im Röntgenbild.
+en: Opacity | opacification; opacities
+fr: Opacité | opacités
+
+@lucency
+de: Aufhellung | Transparenzerhöhung; Transparenzvermehrung | Areal vermehrter Strahlentransparenz im Röntgenbild.
+en: Lucency | hyperlucency; radiolucency
+fr: Hyperclarté | hypertransparence
+
+@atelectasis | RadLex:RID28493
+de: Atelektase | Dystelektase; Minderbelüftung; Belüftungsstörung; Plattenatelektase; Kompressionsatelektase; Teilatelektase | Verminderter oder fehlender Luftgehalt von Lungengewebe mit Volumenverlust.
+en: Atelectasis | atelectases; collapse; subsegmental atelectasis; plate-like atelectasis; linear atelectasis; dependent atelectasis
+fr: Atélectasie | atélectasie en bande; trouble ventilatoire; collapsus pulmonaire
+
+@air-bronchogram
+de: Bronchopneumogramm | Aerobronchogramm; positives Bronchopneumogramm; Luftbronchogramm | Luftgefüllte Bronchien innerhalb eines verdichteten Lungenareals.
+en: Air bronchogram | air bronchograms
+fr: Bronchogramme aérique | bronchogramme aérien
+
+@reticulation
+de: Retikulation | retikuläres Muster; retikuläre Zeichnungsvermehrung; retikuläre Verdichtungen; Retikulationen | Netzartiges Muster feiner linearer Verdichtungen als Zeichen einer interstitiellen Veränderung.
+en: Reticulation | reticular pattern; reticular opacities; reticular abnormality
+fr: Réticulation | aspect réticulaire; opacités réticulaires
+
+@honeycombing
+de: Honigwabenmuster | Honigwabenlunge; Honeycombing; Wabenbildung | Gruppierte subpleurale Zysten mit kräftigen Wänden als Zeichen einer fortgeschrittenen Lungenfibrose.
+en: ^Honeycombing | honeycomb pattern; honeycomb lung
+fr: Rayon de miel | aspect en rayon de miel; images en rayon de miel
+
+@traction-bronchiectasis
+de: Traktionsbronchiektasen | Traktionsbronchiektasie; Traktionsbronchiolektasen | Durch fibrotischen Zug irregulär erweiterte Bronchien.
+en: Traction bronchiectasis | traction bronchiolectasis
+fr: Bronchectasies de traction | bronchiectasies de traction; bronchiolectasies de traction
+
+@bronchiectasis
+de: Bronchiektasen | Bronchiektasie; Bronchiektase | Irreversible Erweiterung von Bronchien.
+en: Bronchiectasis | bronchiectases
+fr: Bronchectasies | bronchiectasies; dilatation des bronches; dilatations des bronches; =DDB
+
+@bronchial-wall-thickening
+de: Bronchialwandverdickung | verdickte Bronchialwände; peribronchiale Verdickung; Peribronchialcuffing | Verdickte Wand der Bronchien, z. B. bei Bronchitis oder Stauung.
+en: Bronchial wall thickening | peribronchial thickening; peribronchial cuffing
+fr: Épaississement des parois bronchiques | épaississement pariétal bronchique; épaississement bronchique; épaississement péribronchique
+
+@tree-in-bud
+de: Tree-in-bud-Muster | Tree-in-bud; Tree in bud; Baumknospenmuster; Baum-in-Knospe | Zentrilobuläre verzweigte Verdichtungen mit knospenartigen Enden bei Bronchiolitis.
+en: ^Tree-in-bud | tree-in-bud pattern; tree-in-bud opacities; ^tree in bud
+fr: Arbre en bourgeons | aspect d'arbre en bourgeons; micronodules en arbre en bourgeons
+
+@crazy-paving
+de: Crazy-Paving-Muster | Crazy Paving; Pflastersteinmuster | Milchglas mit überlagerten verdickten Interlobulärsepten.
+en: ^Crazy paving | crazy-paving pattern
+fr: Crazy paving | aspect de crazy paving; pavage en mosaïque
+
+@mosaic-attenuation
+de: Mosaikmuster | Mosaikperfusion; Mosaikdichte; mosaikartige Dichteverteilung | Fleckiges Nebeneinander unterschiedlich dichter Lungenareale.
+en: Mosaic attenuation | mosaic pattern; mosaic perfusion
+fr: Perfusion en mosaïque | aspect en mosaïque; atténuation en mosaïque
+
+@air-trapping
+de: Air Trapping | Airtrapping; Air-Trapping; Luftretention | Lungenareale, die in Exspiration nicht an Dichte zunehmen.
+en: ^Air trapping | gas trapping
+fr: Piégeage aérique | piégeage expiratoire; trappage aérique
+
+@septal-thickening
+de: Septumverdickung | interlobuläre Septumverdickung; verdickte Interlobulärsepten; septale Verdickung; Kerley-Linien; Kerley-B-Linien | Verdickung der interlobulären Septen, z. B. bei Ödem oder Lymphangiosis.
+en: Septal thickening | interlobular septal thickening; thickened interlobular septa; Kerley lines; Kerley B lines
+fr: Épaississement septal | épaississement des septa interlobulaires; lignes de Kerley; lignes septales
+
+@emphysema
+de: Emphysem | Lungenemphysem; zentrilobuläres Emphysem; paraseptales Emphysem; panlobuläres Emphysem; emphysematöser Umbau | Irreversible Erweiterung der Lufträume distal der terminalen Bronchiolen.
+en: Emphysema | centrilobular emphysema; paraseptal emphysema; panlobular emphysema; emphysematous changes
+fr: Emphysème | emphysème centrolobulaire; emphysème paraseptal; emphysème panlobulaire
+
+@bulla
+de: Bulla | Bullae; Emphysembulla; Emphysembullae | Luftraum über 1 cm mit hauchdünner Wand.
+en: Bulla | bullae; emphysematous bulla
+fr: Bulle d'emphysème | bulles d'emphysème; bulle
+
+@cavity
+de: Kaverne | Kavitation; Einschmelzung; kavernöse Läsion; Kavernenbildung | Luftgefüllter Hohlraum innerhalb einer Konsolidierung, Raumforderung oder eines Nodulus.
+en: Cavity | cavitation; cavitary lesion; cavitating lesion
+fr: Caverne | cavité; excavation; lésion excavée
+
+@pleural-effusion
+de: Pleuraerguss | Erguss; Pleuraergüsse; Randwinkelerguss; Winkelerguss; Begleiterguss | Flüssigkeitsansammlung im Pleuraspalt.
+en: Pleural effusion | effusion; pleural fluid
+fr: Épanchement pleural | épanchement; pleurésie; épanchement liquidien pleural
+
+@pleural-thickening
+de: Pleuraverdickung | Pleuraschwiele; Pleuraschwarte; pleurale Verdickung; Pleuraplaque; Pleuraplaques | Umschriebene oder diffuse Verdickung der Pleura.
+en: Pleural thickening | pleural plaque
+fr: Épaississement pleural | plaque pleurale
+
+@pneumothorax
+de: Pneumothorax | Spannungspneumothorax; Mantelpneumothorax; Seropneumothorax | Luft im Pleuraspalt.
+en: Pneumothorax | tension pneumothorax; hydropneumothorax
+fr: Pneumothorax | pneumothorax compressif; hydropneumothorax
+
+@pneumomediastinum
+de: Pneumomediastinum | Mediastinalemphysem
+en: Pneumomediastinum
+fr: Pneumomédiastin
+
+@subcutaneous-emphysema
+de: Weichteilemphysem | Hautemphysem; subkutanes Emphysem
+en: Subcutaneous emphysema | soft tissue emphysema; surgical emphysema
+fr: Emphysème sous-cutané | emphysème des parties molles
+
+@pericardial-effusion
+de: Perikarderguss |  | Flüssigkeitsansammlung im Herzbeutel.
+en: Pericardial effusion
+fr: Épanchement péricardique
+
+@cardiomegaly
+de: Kardiomegalie | Herzvergrößerung; vergrößerter Herzschatten; Herzverbreiterung | Vergrößerung der Herzsilhouette.
+en: Cardiomegaly | enlarged heart; enlarged cardiac silhouette; cardiac enlargement
+fr: Cardiomégalie | élargissement de la silhouette cardiaque
+
+@pulmonary-congestion
+de: pulmonalvenöse Stauung | Lungenstauung; Stauungszeichen; pulmonale Stauung; Stauung; zentrale Stauung; Kranialisation | Zeichen des erhöhten pulmonalvenösen Drucks.
+en: Pulmonary venous congestion | pulmonary congestion; vascular congestion; cephalization; pulmonary vascular congestion
+fr: Surcharge vasculaire pulmonaire | congestion pulmonaire; redistribution vasculaire; surcharge hilaire
+
+@pulmonary-edema
+de: Lungenödem | interstitielles Lungenödem; alveoläres Lungenödem; Ödem der Lunge
+en: Pulmonary edema | pulmonary oedema; interstitial edema; alveolar edema
+fr: Œdème pulmonaire | œdème interstitiel; œdème alvéolaire; =OAP
+
+@lymphadenopathy
+de: Lymphadenopathie | Lymphknotenvergrößerung; vergrößerte Lymphknoten; pathologisch vergrößerte Lymphknoten; Lymphknotenschwellung; Lymphome; Lymphadenomegalie | Vergrößerte oder morphologisch auffällige Lymphknoten.
+en: Lymphadenopathy | adenopathy; enlarged lymph nodes; lymph node enlargement
+fr: Adénopathie | adénomégalie; ganglions augmentés de taille
+
+@filling-defect
+de: Füllungsdefekt | Kontrastmittelaussparung; Kontrastmittelaussparungen; KM-Aussparung; Füllungsdefekte; intraluminale Aussparung | Aussparung im kontrastierten Gefäßlumen, z. B. bei Thrombus oder Embolus.
+en: Filling defect | intraluminal filling defect
+fr: Défaut de remplissage | défect endoluminal; lacune endoluminale; défaut d'opacification
+
+@mediastinal-widening
+de: Mediastinalverbreiterung | verbreitertes Mediastinum; Mediastinalverlagerung; Mediastinalshift
+en: Mediastinal widening | widened mediastinum; mediastinal shift
+fr: Élargissement du médiastin | élargissement médiastinal; déviation médiastinale
+
+# --- Neuro ---
+
+@restricted-diffusion
+de: Diffusionsrestriktion | Diffusionsstörung; Diffusionseinschränkung; eingeschränkte Diffusion; restringierte Diffusion; Diffusionsrestriktionen; ADC-Absenkung; ADC-Minderung; DWI-Läsion | Signalanhebung in der Diffusionswichtung mit korrespondierender ADC-Absenkung, z. B. bei frischer Ischämie, Abszess oder zellreichem Tumor.
+en: Restricted diffusion | diffusion restriction; restricted diffusivity; reduced diffusion; low ADC
+fr: Restriction de la diffusion | restriction de diffusion; hypersignal de diffusion; hypersignal diffusion; diminution de l'ADC; baisse de l'ADC
+
+@white-matter-lesion
+de: Marklagerläsion | Marklagerläsionen; Marklagerveränderungen; Marklagerhyperintensitäten; White-Matter-Läsionen; Leukoaraiose; mikroangiopathische Marklagerveränderungen; Mikroangiopathie; Leukenzephalopathie | T2/FLAIR-hyperintense Veränderungen der weißen Substanz.
+en: White matter lesion | white matter hyperintensities; white matter hyperintensity; white matter changes; leukoaraiosis; small vessel disease; microangiopathic changes
+fr: Lésion de la substance blanche | hypersignaux de la substance blanche; leucoaraïose; leucopathie; leucopathie vasculaire
+
+@midline-shift
+de: Mittellinienverlagerung | Mittellinienshift; Mittellinienverschiebung; Verlagerung der Mittellinie | Verlagerung der Mittellinienstrukturen des Gehirns durch raumfordernde Wirkung.
+en: Midline shift
+fr: Déviation de la ligne médiane | déplacement de la ligne médiane
+
+@cerebral-edema
+de: Hirnödem | perifokales Ödem; vasogenes Ödem; zytotoxisches Ödem; Perifokalödem; Hirnschwellung
+en: Cerebral edema | cerebral oedema; brain edema; perilesional edema; vasogenic edema; cytotoxic edema; brain swelling
+fr: Œdème cérébral | œdème périlésionnel; œdème vasogénique; œdème cytotoxique
+
+@hemorrhage
+de: Blutung | Hämorrhagie; Einblutung; intrakranielle Blutung; intrazerebrale Blutung; Hirnblutung; Parenchymblutung; =ICB | Akuter Blutaustritt; im nativen CT hyperdens.
+en: Hemorrhage | haemorrhage; bleeding; intracranial hemorrhage; intracerebral hemorrhage; intraparenchymal hemorrhage; =ICH
+fr: Hémorragie | saignement; hémorragie intracrânienne; hémorragie intraparenchymateuse; hématome intraparenchymateux
+
+@subarachnoid-hemorrhage
+de: Subarachnoidalblutung | =SAB; subarachnoidale Blutung
+en: Subarachnoid hemorrhage | subarachnoid haemorrhage; =SAH
+fr: Hémorragie sous-arachnoïdienne | hémorragie méningée; =HSA
+
+@subdural-hematoma
+de: Subduralhämatom | =SDH; subdurales Hämatom; Subduralblutung
+en: Subdural hematoma | subdural haematoma; subdural hemorrhage; =SDH
+fr: Hématome sous-dural | =HSD
+
+@epidural-hematoma
+de: Epiduralhämatom | =EDH; epidurales Hämatom
+en: Epidural hematoma | epidural haematoma; extradural hematoma; =EDH
+fr: Hématome extradural | hématome épidural; =HED
+
+@infarct
+de: Infarkt | Ischämie; Infarktareal; Infarktdemarkation; ischämische Läsion; Territorialinfarkt; lakunärer Infarkt; Lakune; Lakunen; Infarktfrühzeichen | Ischämisch geschädigtes Gewebeareal.
+en: Infarct | infarction; ischemia; ischaemia; ischemic lesion; territorial infarct; lacunar infarct; lacune; early ischemic changes
+fr: Infarctus | ischémie; lésion ischémique; infarctus territorial; lacune; signes précoces d'ischémie
+
+@dense-mca-sign
+de: hyperdenses Mediazeichen | hyperdenses Arterienzeichen; Dense-Media-Sign; dense media sign | Hyperdenser Thrombus in der A. cerebri media im nativen CT.
+en: Hyperdense MCA sign | dense MCA sign; hyperdense artery sign; ^dense media sign
+fr: Signe de la sylvienne hyperdense | artère sylvienne hyperdense
+
+@hydrocephalus
+de: Hydrozephalus | Hydrocephalus; Liquoraufstau; Ventrikelerweiterung; Liquorzirkulationsstörung; Ventrikulomegalie
+en: Hydrocephalus | ventriculomegaly; ventricular enlargement; ventricular dilatation
+fr: Hydrocéphalie | dilatation ventriculaire; ventriculomégalie
+
+@brain-atrophy
+de: Hirnatrophie | Atrophie; Hirnvolumenminderung; globale Hirnvolumenminderung; Volumenminderung
+en: Cerebral atrophy | brain atrophy; atrophy; volume loss; cerebral volume loss
+fr: Atrophie cérébrale | atrophie; atrophie cortico-sous-corticale
+
+@microbleed
+de: Mikroblutung | Mikroblutungen; Microbleeds; Hämosiderinablagerung; Hämosiderinablagerungen; Suszeptibilitätsartefakt
+en: ^Microbleed | microhemorrhage; hemosiderin deposition; susceptibility artifact
+fr: Microsaignement | microhémorragie; dépôts d'hémosidérine
+
+@bbb-disruption
+de: Schrankenstörung | Blut-Hirn-Schrankenstörung; Störung der Blut-Hirn-Schranke
+en: Blood-brain barrier disruption | blood-brain barrier breakdown
+fr: Rupture de la barrière hémato-encéphalique | rupture de barrière
+
+@gliosis
+de: Gliose | Glianarbe; gliotische Veränderung; Defektzone; Substanzdefekt
+en: Gliosis | encephalomalacia; gliotic change
+fr: Gliose | cicatrice gliale; encéphalomalacie
+
+@herniation
+de: Herniation | Einklemmung; transtentorielle Herniation; subfalzine Herniation
+en: Herniation | brain herniation; transtentorial herniation; subfalcine herniation; uncal herniation; tonsillar herniation
+fr: Engagement cérébral | engagement; engagement sous-falcoriel; engagement temporal; engagement amygdalien
+
+# --- Abdomen ---
+
+@liver-lesion
+de: Leberläsion | Leberherd; Leberraumforderung; fokale Leberläsion; Leberrundherd; Leberherde
+en: Liver lesion | hepatic lesion; focal liver lesion; liver mass; hepatic mass
+fr: Lésion hépatique | lésion focale hépatique; nodule hépatique; masse hépatique
+
+@cyst
+de: Zyste | Zysten; zystische Läsion; zystische Raumforderung; Nierenzyste; Leberzyste; Ovarialzyste | Flüssigkeitsgefüllter, glatt begrenzter Hohlraum.
+en: Cyst | cystic lesion; cystic mass; renal cyst; hepatic cyst; ovarian cyst
+fr: Kyste | lésion kystique; kyste rénal; kyste hépatique; kyste ovarien; kyste biliaire
+
+@steatosis
+de: Steatose | Steatosis hepatis; Leberverfettung; Fettleber; Parenchymverfettung
+en: Hepatic steatosis | steatosis; fatty liver; fatty infiltration
+fr: Stéatose hépatique | stéatose; foie stéatosique
+
+@ascites
+de: Aszites | freie Flüssigkeit; freie intraabdominelle Flüssigkeit; Flüssigkeit im Douglas | Freie Flüssigkeit in der Peritonealhöhle.
+en: Ascites | free fluid; free intraperitoneal fluid; free pelvic fluid
+fr: Ascite | épanchement péritonéal; épanchement intrapéritonéal; liquide libre
+
+@free-air
+de: freie Luft | Pneumoperitoneum; freie intraabdominelle Luft; freie abdominelle Luft; subphrenische Luftsichel | Extraluminale Luft in der Bauchhöhle als Perforationszeichen.
+en: Free air | pneumoperitoneum; free intraperitoneal air; free gas; extraluminal air
+fr: Pneumopéritoine | air libre; air extradigestif
+
+@wall-thickening
+de: Wandverdickung | Darmwandverdickung; wandverdickt; Wandödem; Gallenblasenwandverdickung; Harnblasenwandverdickung
+en: Wall thickening | bowel wall thickening; mural thickening; gallbladder wall thickening; bladder wall thickening
+fr: Épaississement pariétal | épaississement de la paroi; épaississement pariétal digestif
+
+@fat-stranding
+de: Fettgewebsimbibierung | Fettgewebsimbibition; perifokale Imbibierung; Umgebungsreaktion; Fettgewebsinjektion; fat stranding; entzündliche Umgebungsreaktion; mesenteriale Imbibierung | Streifige Dichteanhebung des Fettgewebes als Zeichen von Entzündung oder Ödem.
+en: ^Fat stranding | mesenteric stranding; perinephric stranding; inflammatory stranding; stranding
+fr: Infiltration de la graisse | densification de la graisse; infiltration péri-lésionnelle; infiltration de la graisse mésentérique
+
+@hydronephrosis
+de: Harnstau | Harnstauung; Harnstauungsniere; Hydronephrose; Nierenbeckenkelchsystem-Erweiterung; Ektasie des Nierenbeckenkelchsystems; NBKS-Ektasie; Harntransportstörung
+en: Hydronephrosis | hydroureteronephrosis; pelvicalyceal dilatation; collecting system dilatation; hydroureter
+fr: Hydronéphrose | dilatation pyélocalicielle; dilatation des cavités pyélocalicielles; urétéro-hydronéphrose
+
+@calculus
+de: Konkrement | Konkremente; Stein; Steine; Nierenstein; Harnleiterstein; Gallenstein; Gallensteine; Urolithiasis; Nephrolithiasis; Cholezystolithiasis; Choledocholithiasis | Verkalkter Fremdkörper in Hohlorganen oder Gangsystemen.
+en: Calculus | calculi; stone; renal stone; kidney stone; ureteral stone; gallstone; cholelithiasis; nephrolithiasis; urolithiasis; choledocholithiasis
+fr: Calcul | lithiase; lithiase rénale; lithiase vésiculaire; lithiase urinaire; lithiase de la voie biliaire principale
+
+@biliary-dilatation
+de: Cholestase | Gallenwegserweiterung; erweiterte Gallenwege; Gallengangserweiterung; Gallestau; Aerobilie
+en: Biliary dilatation | bile duct dilatation; biliary ductal dilatation; dilated bile ducts; cholestasis; pneumobilia
+fr: Dilatation des voies biliaires | dilatation des voies biliaires intra-hépatiques; cholestase; aérobilie
+
+@bowel-obstruction
+de: Ileus | Dünndarmileus; Dickdarmileus; Spiegelbildung; Luft-Flüssigkeits-Spiegel; Flüssigkeitsspiegel; dilatierte Darmschlingen; Kalibersprung
+en: Bowel obstruction | small bowel obstruction; large bowel obstruction; ileus; air-fluid levels; dilated bowel loops; transition point; =SBO
+fr: Occlusion intestinale | occlusion du grêle; occlusion colique; iléus; niveaux hydro-aériques; syndrome occlusif; zone de transition
+
+@pneumatosis
+de: Pneumatosis intestinalis | Pneumatosis; intramurale Luft; Darmwandpneumatose
+en: Pneumatosis intestinalis | pneumatosis; intramural gas
+fr: Pneumatose intestinale | pneumatose pariétale; pneumatose
+
+@abscess
+de: Abszess | Abszessformation; Abszedierung; Verhalt; Flüssigkeitsverhalt; Flüssigkeitskollektion; Kollektion; Serom
+en: Abscess | fluid collection; collection; seroma; rim-enhancing collection
+fr: Abcès | collection; collection liquidienne; collection abcédée; sérome
+
+@splenomegaly
+de: Splenomegalie | Milzvergrößerung; vergrößerte Milz
+en: Splenomegaly | enlarged spleen
+fr: Splénomégalie
+
+@hepatomegaly
+de: Hepatomegalie | Lebervergrößerung; vergrößerte Leber
+en: Hepatomegaly | enlarged liver
+fr: Hépatomégalie
+
+@diverticulum
+de: Divertikel | Divertikulose; Sigmadivertikulose; Kolondivertikel
+en: Diverticulum | diverticula; diverticulosis; colonic diverticulosis; sigmoid diverticulosis
+fr: Diverticule | diverticulose; diverticulose colique; diverticulose sigmoïdienne
+
+@hernia
+de: Hernie | Hiatushernie; Leistenhernie; Nabelhernie; Narbenhernie; Bauchwandhernie
+en: Hernia | hiatal hernia; hiatus hernia; inguinal hernia; umbilical hernia; incisional hernia
+fr: Hernie | hernie hiatale; hernie inguinale; hernie ombilicale; éventration
+
+# --- Gefäße ---
+
+@stenosis
+de: Stenose | Einengung; Lumeneinengung; Gefäßstenose; hochgradige Stenose; Abgangsstenose | Einengung eines Gefäß- oder Hohlorganlumens.
+en: Stenosis | stenoses; narrowing; luminal narrowing; high-grade stenosis
+fr: Sténose | rétrécissement; sténose serrée
+
+@occlusion
+de: Verschluss | Okklusion; Gefäßverschluss; Gefäßabbruch; Verschlüsse
+en: Occlusion | vessel occlusion; vascular occlusion; vessel cutoff
+fr: Occlusion vasculaire | occlusion; occlusion artérielle; thrombose occlusive
+
+@aneurysm
+de: Aneurysma | Aneurysmen; aneurysmatische Erweiterung; Ektasie; Aortenaneurysma; Bauchaortenaneurysma; =BAA
+en: Aneurysm | aneurysmal dilatation; ectasia; aortic aneurysm; abdominal aortic aneurysm; =AAA
+fr: Anévrisme | anévrysme; dilatation anévrismale; ectasie; anévrisme de l'aorte abdominale; =AAA
+
+@dissection
+de: Dissektion | Aortendissektion; Dissektionsmembran; Intimaflap
+en: Dissection | aortic dissection; intimal flap; dissection flap
+fr: Dissection | dissection aortique; flap intimal
+
+@thrombus
+de: Thrombus | Thrombose; Thromben; thrombotisches Material; Wandthrombus; Teilthrombosierung
+en: Thrombus | thrombosis; thrombi; mural thrombus; clot
+fr: Thrombus | thrombose; thrombus mural; caillot
+
+@calcification
+de: Verkalkung | Kalzifikation; Kalzifikationen; Verkalkungen; Kalk; Gefäßverkalkung; Wandverkalkung; Koronarkalk; Mikrokalk | Kalkdichte Einlagerung.
+en: Calcification | vascular calcification; coronary calcification; microcalcification
+fr: Calcification | calcifications vasculaires; calcifications coronaires; microcalcification
+
+@atherosclerosis
+de: Atherosklerose | Arteriosklerose; Gefäßsklerose; Aortensklerose; Plaque; Plaques; kalzifizierte Plaques; Koronarsklerose
+en: Atherosclerosis | atheroma; atherosclerotic plaque; plaque; calcified plaque; atheromatous disease
+fr: Athérome | athérosclérose; plaque d'athérome; plaques d'athérome; plaque calcifiée; athéromatose
+
+@contrast-extravasation
+de: Kontrastmittelextravasat | Kontrastmittelaustritt; KM-Extravasat; aktive Blutung; Extravasation | Austritt von Kontrastmittel aus dem Gefäßlumen als Zeichen einer aktiven Blutung.
+en: Contrast extravasation | active extravasation; active bleeding; extravasation
+fr: Extravasation de produit de contraste | extravasation; saignement actif; fuite de produit de contraste
+
+# --- Muskuloskelettal ---
+
+@fracture
+de: Fraktur | Frakturen; Bruch; Frakturlinie; Frakturspalt; Infraktion; Fissur; Kortikalisunterbrechung | Kontinuitätsunterbrechung des Knochens.
+en: Fracture | fracture line; cortical break; fissure
+fr: Fracture | trait de fracture; fissure; rupture corticale
+
+@displacement
+de: Dislokation | Fehlstellung; Fragmentdislokation; disloziert; Achsabweichung; Stufenbildung
+en: Displacement | displaced; malalignment; angulation; step-off
+fr: Déplacement | déplacé; angulation; décalage
+
+@dislocation
+de: Luxation | Subluxation; Gelenkluxation
+en: Dislocation | subluxation
+fr: Luxation | subluxation
+
+@osteolysis
+de: Osteolyse | Osteolysen; osteolytische Läsion; lytische Läsion; Knochendestruktion | Umschriebener Knochensubstanzverlust.
+en: Osteolysis | lytic lesion; osteolytic lesion; bone destruction
+fr: Ostéolyse | lésion lytique; lésion ostéolytique; lyse osseuse
+
+@sclerosis
+de: Sklerosierung | Sklerose; osteoplastische Läsion; sklerotische Läsion; subchondrale Sklerosierung; Osteosklerose
+en: Sclerosis | sclerotic lesion; osteoblastic lesion; subchondral sclerosis; osteosclerosis
+fr: Ostéocondensation | lésion condensante; condensation osseuse; sclérose sous-chondrale; ostéosclérose
+
+@bone-marrow-edema
+de: Knochenmarködem | Knochenmarksödem; Bone bruise; Bone-Bruise; Knochenmarkkontusion; =KMÖ | Signalanhebung des Knochenmarks in fettgesättigten flüssigkeitssensitiven Sequenzen.
+en: Bone marrow edema | bone marrow oedema; marrow edema; ^bone bruise; bone contusion
+fr: Œdème médullaire | œdème osseux; œdème de la moelle osseuse; contusion osseuse
+
+@joint-effusion
+de: Gelenkerguss | Kniegelenkerguss; intraartikulärer Erguss; Ergussbildung
+en: Joint effusion | knee effusion; intra-articular effusion
+fr: Épanchement articulaire | épanchement intra-articulaire; hydarthrose
+
+@joint-space-narrowing
+de: Gelenkspaltverschmälerung | Gelenkspaltverschmälerungen; verschmälerter Gelenkspalt; Höhenminderung des Gelenkspalts
+en: Joint space narrowing | joint space loss
+fr: Pincement articulaire | pincement de l'interligne articulaire; pincement de l'interligne
+
+@osteophyte
+de: Osteophyt | Osteophyten; osteophytäre Anbauten; Randanbauten; Spondylophyten; Spondylophyt; knöcherne Anbauten
+en: Osteophyte | osteophytosis; marginal osteophytes; spondylophyte; bony spur
+fr: Ostéophyte | ostéophytose; becs ostéophytiques
+
+@osteoarthritis
+de: Arthrose | degenerative Veränderungen; Degeneration; Gonarthrose; Coxarthrose; Koxarthrose; Omarthrose; Spondylarthrose; Facettengelenksarthrose; Osteochondrose; Spondylose
+en: Osteoarthritis | degenerative changes; degenerative change; degenerative disease; osteoarthrosis; spondylosis; facet arthropathy; degenerative disc disease
+fr: Arthrose | remaniements dégénératifs; lésions dégénératives; gonarthrose; coxarthrose; omarthrose; discarthrose
+
+@disc-herniation
+de: Bandscheibenvorfall | Diskusprolaps; Prolaps; Bandscheibenprolaps; Nucleus-pulposus-Prolaps; =NPP; Sequester; Diskushernie
+en: Disc herniation | disc extrusion; herniated disc; disc prolapse; sequestration; sequestered fragment
+fr: Hernie discale | hernies discales; extrusion discale; fragment exclu
+
+@disc-protrusion
+de: Bandscheibenprotrusion | Protrusion; Diskusprotrusion; Bandscheibenvorwölbung; Bandscheibenprotrusionen
+en: Disc protrusion | disc bulge; bulging disc; disc bulging
+fr: Protrusion discale | débord discal; bombement discal; saillie discale
+
+@spinal-stenosis
+de: Spinalkanalstenose | spinale Stenose; Spinalstenose; spinale Enge; Neuroforamenstenose; neuroforaminale Enge; Foramenstenose; Rezessusstenose
+en: Spinal canal stenosis | spinal stenosis; central canal stenosis; foraminal stenosis; neural foraminal narrowing; lateral recess stenosis
+fr: Canal lombaire étroit | sténose canalaire; rétrécissement canalaire; sténose foraminale; rétrécissement foraminal
+
+@vertebral-fracture
+de: Wirbelkörperfraktur | Wirbelkörpersinterung; Sinterung; Sinterungsfraktur; Deckplatteneinbruch; Deckplattenimpression; Kompressionsfraktur; Höhenminderung
+en: Vertebral compression fracture | compression fracture; vertebral fracture; wedge fracture; vertebral collapse; endplate fracture
+fr: Tassement vertébral | fracture-tassement; fracture vertébrale; tassement cunéiforme
+
+@tear
+de: Ruptur | Riss; Teilruptur; Komplettruptur; Bandruptur; Sehnenruptur; Meniskusriss; Kreuzbandruptur; Rotatorenmanschettenruptur; Partialruptur
+en: Tear | rupture; partial tear; full-thickness tear; complete tear; ligament tear; tendon tear; meniscal tear; rotator cuff tear
+fr: Rupture | déchirure; rupture partielle; rupture complète; rupture ligamentaire; rupture tendineuse; fissure méniscale; lésion méniscale; rupture de la coiffe des rotateurs
+
+@soft-tissue-swelling
+de: Weichteilschwellung | Weichteilödem; Weichteilhämatom; Hämatom; Hämatome
+en: Soft tissue swelling | soft tissue edema; hematoma; haematoma; soft tissue hematoma
+fr: Tuméfaction des parties molles | œdème des parties molles; infiltration des parties molles; hématome
+
+@osteopenia
+de: Osteopenie | verminderter Mineralsalzgehalt; Mineralsalzminderung; Kalksalzminderung; Demineralisation
+en: Osteopenia | demineralization; reduced bone density
+fr: Ostéopénie | déminéralisation osseuse; déminéralisation; raréfaction osseuse
+
+# --- allgemein ---
+
+@lesion
+de: Läsion | Läsionen; Herdbefund; Herdläsion; fokale Läsion; Herdbildung
+en: Lesion | focal lesion; focal abnormality
+fr: Lésion | lésion focale; anomalie focale
+
+@enhancement
+de: Kontrastmittelaufnahme | KM-Aufnahme; Kontrastmittelanreicherung; KM-Anreicherung; Enhancement; Anreicherung; Kontrastmittelenhancement; Kontrastmittelanflutung; randständige Kontrastmittelaufnahme; ringförmige Kontrastmittelaufnahme; Ringenhancement; KM-Enhancement | Dichte- bzw. Signalanstieg nach Kontrastmittelgabe.
+en: ^Enhancement | contrast enhancement; contrast uptake; rim enhancement; ring enhancement; peripheral enhancement
+fr: Rehaussement | prise de contraste; rehaussement périphérique; rehaussement annulaire; prise de contraste périphérique; prise de contraste annulaire
+
+@necrosis
+de: Nekrose | Nekroseareal; zentrale Nekrose; nekrotische Anteile
+en: Necrosis | central necrosis; necrotic component
+fr: Nécrose | nécrose centrale; plage de nécrose; composante nécrotique
+
+@metastasis
+de: Metastase | Metastasen; Filia; Filiae; metastasensuspekt; Metastasierung; Lungenmetastasen; Lebermetastasen; Knochenmetastasen
+en: Metastasis | metastases; metastatic disease; metastatic lesion; secondary deposits; lung metastases; liver metastases; bone metastases
+fr: Métastase | lésion secondaire; lésions secondaires; localisation secondaire; localisations secondaires; métastases pulmonaires; métastases hépatiques; métastases osseuses
+
+@artifact
+de: Artefakt | Artefakte; Bewegungsartefakt; Bewegungsartefakte; Metallartefakt; Metallartefakte; Aufhärtungsartefakt; Aufhärtungsartefakte
+en: Artifact | artefact; motion artifact; metal artifact; beam hardening artifact
+fr: Artéfact | artefact; artéfacts de mouvement; artéfacts métalliques
+
+@foreign-material
+de: Fremdmaterial | Fremdkörper; Osteosynthesematerial; Metallimplantat; Clipmaterial
+en: Foreign body | foreign material; orthopedic hardware; surgical clips; metallic implant
+fr: Corps étranger | matériel étranger; matériel d'ostéosynthèse; clips chirurgicaux; implant métallique
+
+@scar
+de: Narbe | narbige Veränderungen; Narbenbildung; narbige Residuen; postentzündliche Residuen; Residuen; Schwiele; fibrotische Veränderungen; Fibrose
+en: Scarring | scar; fibrosis; fibrotic changes; post-inflammatory changes; residual changes; sequelae
+fr: Cicatrice | séquelles; lésions séquellaires; fibrose; remaniements fibreux; remaniements cicatriciels
+
+@washout
+de: Washout | Auswaschphänomen; Kontrastmittelauswaschung; Auswaschen
+en: ^Washout | contrast washout; wash-out
+fr: Lavage | lavage portal; lavage tardif; wash-out
+
+@arterial-hyperenhancement
+de: arterielle Hypervaskularisation | arterielle Kontrastmittelaufnahme; arterielles Hyperenhancement; arteriell hypervaskularisiert
+en: Arterial phase hyperenhancement | arterial hyperenhancement; arterial enhancement; =APHE
+fr: Rehaussement artériel | hypervascularisation artérielle; prise de contraste artérielle
+
+@varices
+de: Varizen | Ösophagusvarizen; Fundusvarizen; gastrale Varizen; Umgehungskreisläufe; Kollateralen
+en: Varices | esophageal varices; oesophageal varices; gastric varices; portosystemic collaterals; collaterals
+fr: Varices | varices œsophagiennes; varices gastriques; voies de dérivation porto-systémiques; circulation collatérale
+
+@interstitial-markings
+de: Zeichnungsvermehrung | interstitielle Zeichnungsvermehrung; vermehrte Lungengerüstzeichnung; feinnoduläre Zeichnungsvermehrung
+en: Increased interstitial markings | interstitial markings; interstitial opacities; interstitial pattern
+fr: Syndrome interstitiel | accentuation de la trame interstitielle; opacités interstitielles
+
+@dwi-flair-mismatch
+de: DWI-FLAIR-Mismatch | Mismatch
+en: ^DWI-FLAIR mismatch | mismatch
+fr: Mismatch diffusion-FLAIR | mismatch FLAIR-diffusion; mismatch
+
+## modifier
+
+@hypodense
+de: hypodens | Hypodensität; hypodense Läsion; dichtegemindert; Dichteminderung | Geringere Dichte als das Vergleichsgewebe im CT.
+en: hypodense | hypodensity; hypoattenuating; hypoattenuation; low attenuation; low density; low-attenuation
+fr: hypodense | hypodensité
+
+@hyperdense
+de: hyperdens | Hyperdensität; dichteangehoben; Dichteanhebung | Höhere Dichte als das Vergleichsgewebe im CT.
+en: hyperdense | hyperdensity; hyperattenuating; high attenuation; high density
+fr: hyperdense | hyperdensité; hyperdensité spontanée; spontanément hyperdense
+
+@isodense
+de: isodens | Isodensität
+en: isodense | isoattenuating
+fr: isodense
+
+@hypointense
+de: hypointens | Hypointensität; Signalminderung; signalarm; Signalabsenkung; Signalauslöschung | Geringeres Signal als das Vergleichsgewebe im MRT.
+en: hypointense | hypointensity; low signal; low signal intensity; signal loss; signal void
+fr: hyposignal | hypo-intense; hypointense; en hyposignal; vide de signal
+
+@hyperintense
+de: hyperintens | Hyperintensität; Signalanhebung; signalreich; Signalsteigerung; Signalalteration | Höheres Signal als das Vergleichsgewebe im MRT.
+en: hyperintense | hyperintensity; high signal; high signal intensity; increased signal; signal abnormality
+fr: hypersignal | hyper-intense; hyperintense; en hypersignal; anomalie de signal
+
+@isointense
+de: isointens | Isointensität
+en: isointense
+fr: isosignal | iso-intense; isointense
+
+@hypoechoic
+de: echoarm | hypoechogen; echoärmer; Echoarmut
+en: hypoechoic | hypoechogenic
+fr: hypoéchogène
+
+@hyperechoic
+de: echoreich | hyperechogen; echoreicher
+en: hyperechoic | hyperechogenic; echogenic
+fr: hyperéchogène | échogène
+
+@anechoic
+de: echofrei | anechogen
+en: anechoic
+fr: anéchogène | transsonore
+
+@enhancing
+de: kontrastmittelaufnehmend | KM-aufnehmend; kontrastmittelaffin; KM-affin; anreichernd; hypervaskularisiert; hypervaskulär; hypovaskulär; hypovaskularisiert
+en: enhancing | hypervascular; hypovascular; avidly enhancing
+fr: rehaussé | hypervasculaire; hypovasculaire; prenant le contraste
+
+@well-defined
+de: glatt begrenzt | glatt berandet; scharf begrenzt; scharf berandet; gut abgrenzbar
+en: well-defined | well defined; well-circumscribed; well circumscribed; sharply marginated; smoothly marginated
+fr: bien limité | à contours nets; à contours réguliers; bien circonscrit
+
+@ill-defined
+de: unscharf begrenzt | unscharf berandet; irregulär begrenzt; unregelmäßig begrenzt; schlecht abgrenzbar; infiltrativ
+en: ill-defined | ill defined; poorly defined; poorly marginated; irregular margins; infiltrative
+fr: mal limité | à contours flous; à contours irréguliers; infiltrant
+
+@spiculated
+de: spikuliert | Spikulae; spikulär; sternförmig ausgezogen; Ausziehungen
+en: spiculated | spiculation
+fr: spiculé | à contours spiculés; spicules
+
+@lobulated
+de: lobuliert | gelappt; polyzyklisch
+en: lobulated | lobulation; polylobulated
+fr: lobulé | polylobé; à contours lobulés
+
+@calcified
+de: verkalkt | kalzifiziert; kalkdicht; teilverkalkt
+en: calcified | partially calcified
+fr: calcifié | partiellement calcifié
+
+@cystic
+de: zystisch | zystisch-solide; teils zystisch
+en: cystic | cystic-solid; partially cystic
+fr: kystique | solido-kystique
+
+@solid
+de: solide | solid
+en: solid
+fr: solide | tissulaire
+
+@septated
+de: septiert | Septierung; Septierungen; gekammert
+en: septated | septation; multiloculated; loculated
+fr: cloisonné | cloisons; multiloculaire; multicloisonné
+
+@heterogeneous
+de: inhomogen | heterogen; Inhomogenität
+en: heterogeneous | inhomogeneous; heterogeneity
+fr: hétérogène
+
+@homogeneous
+de: homogen
+en: homogeneous
+fr: homogène
+
+@mass-effect
+de: raumfordernd | raumfordernde Wirkung; Masseneffekt; verdrängend; Kompressionseffekt
+en: mass effect | space-occupying; compressive
+fr: effet de masse | compressif; refoulant
+
+@progressive
+de: größenprogredient | progredient; zunehmend; Größenprogredienz; Progress; Befundprogress; neu aufgetreten; neu abgrenzbar
+en: progressive | progression; increasing; increased in size; interval increase; interval growth; enlarging; newly seen
+fr: en progression | progression; en augmentation; majoration; majoré; augmentation de taille; d'apparition nouvelle
+
+@regressive
+de: größenregredient | regredient; rückläufig; abnehmend; Größenregredienz; Regress; Befundregredienz
+en: decreasing | decreased in size; interval decrease; regression; resolving; interval improvement
+fr: en régression | régression; en diminution; diminution de taille; régressif
+
+@stable
+de: größenkonstant | konstant; unverändert; stationär; idem; Befundkonstanz; stabil
+en: stable | unchanged; no interval change; stable in size
+fr: stable | inchangé; stabilité
+
+@subpleural
+de: subpleural
+en: subpleural
+fr: sous-pleural
+
+@peribronchovascular
+de: peribronchovaskulär | peribronchial; perihilär; bihilär
+en: peribronchovascular | peribronchial; perihilar
+fr: péribronchovasculaire | péribronchique; périhilaire
+
+@basal
+de: basal | basal betont; bibasal; dorsobasal; laterobasal
+en: basal | basilar; bibasilar; bibasal; lower zone predominant
+fr: basal | bibasal; des bases; aux bases; prédominance basale
+
+@apical
+de: apikal | apikal betont; biapikal
+en: apical | biapical; upper zone predominant
+fr: apical | aux apex; biapical; prédominance apicale
+
+@diffuse
+de: diffus | disseminiert; multifokal; ubiquitär
+en: diffuse | disseminated; multifocal; widespread
+fr: diffus | disséminé; multifocal
+
+@focal
+de: fokal | umschrieben; herdförmig; unifokal; solitär
+en: focal | circumscribed; solitary; unifocal
+fr: focal | circonscrit; unifocal
+
+@patchy
+de: fleckig | fleckförmig; flächig; konfluierend; streifig; nodulär; retikulär
+en: patchy | confluent; streaky; nodular; reticular
+fr: en plages | confluent; nodulaire; réticulaire; en bandes
+
+@periventricular
+de: periventrikulär | subkortikal; juxtakortikal; infratentoriell; supratentoriell
+en: periventricular | subcortical; juxtacortical; infratentorial; supratentorial
+fr: périventriculaire | sous-cortical; juxtacortical; sous-tentoriel; sus-tentoriel
+
+@suspicious
+de: suspekt | malignomsuspekt; malignitätsverdächtig; tumorsuspekt; kontrollbedürftig; abklärungsbedürftig
+en: suspicious | suspicious for malignancy; indeterminate; worrisome
+fr: suspect | suspect de malignité; indéterminé; d'allure suspecte
+
+@centrilobular
+de: zentrilobulär | centrilobulär; zentrilobular
+en: centrilobular | centrilobular distribution
+fr: centrolobulaire | centro-lobulaire
+
+@acute
+de: akut | frisch; subakut
+en: acute | subacute
+fr: aigu | aiguë; subaigu; récent
+
+@chronic
+de: chronisch | alt; älter
+en: chronic | old
+fr: chronique | séquellaire
+
+@displaced
+de: disloziert | verschoben; nicht disloziert; undisloziert
+en: displaced | non-displaced; nondisplaced; undisplaced; minimally displaced
+fr: déplacé | non déplacé; peu déplacé
+
+## disease
+
+@pneumonia | ICD-10:J18.9
+de: Pneumonie | Lungenentzündung; Bronchopneumonie; Lobärpneumonie; pneumonisches Infiltrat
+en: Pneumonia | bronchopneumonia; lobar pneumonia; pneumonic infiltrate; pneumonic consolidation
+fr: Pneumonie | pneumopathie; pneumopathie infectieuse; bronchopneumonie; foyer de pneumopathie; foyer infectieux pulmonaire
+
+@pulmonary-embolism | ICD-10:I26
+de: Lungenembolie | Lungenarterienembolie; Pulmonalarterienembolie; =LAE
+en: Pulmonary embolism | pulmonary embolus; pulmonary emboli; =PE
+fr: Embolie pulmonaire | =EP
+
+@ischemic-stroke | ICD-10:I63
+de: Schlaganfall | ischämischer Schlaganfall; Hirninfarkt; Mediainfarkt; Apoplex
+en: Ischemic stroke | ischaemic stroke; stroke; cerebral infarction; MCA infarct
+fr: Accident vasculaire cérébral | accident vasculaire cérébral ischémique; infarctus cérébral; infarctus sylvien; =AVC
+
+@hepatocellular-carcinoma | ICD-10:C22.0
+de: hepatozelluläres Karzinom | Leberzellkarzinom; =HCC
+en: Hepatocellular carcinoma | =HCC
+fr: Carcinome hépatocellulaire | =CHC
+
+@cirrhosis | ICD-10:K74.6
+de: Leberzirrhose | Zirrhose; zirrhotischer Umbau
+en: Cirrhosis | liver cirrhosis; hepatic cirrhosis; cirrhotic liver
+fr: Cirrhose | cirrhose hépatique; foie de cirrhose; hépatopathie chronique
+
+@portal-hypertension | ICD-10:K76.6
+de: portale Hypertension | portale Hypertonie; Pfortaderhochdruck
+en: Portal hypertension
+fr: Hypertension portale | =HTP
+
+@bronchiolitis
+de: Bronchiolitis | respiratorische Bronchiolitis; =RB-ILD
+en: Bronchiolitis | respiratory bronchiolitis; =RB-ILD
+fr: Bronchiolite | bronchiolite respiratoire; bronchiolite du fumeur
+
+@hypersensitivity-pneumonitis
+de: exogen-allergische Alveolitis | exogen allergische Alveolitis; Hypersensitivitätspneumonitis; =EAA
+en: Hypersensitivity pneumonitis | extrinsic allergic alveolitis
+fr: Pneumopathie d'hypersensibilité | alvéolite allergique extrinsèque; =PHS
+
+@pulmonary-fibrosis
+de: Lungenfibrose | fibrosierende Lungenerkrankung; =UIP
+en: Pulmonary fibrosis | lung fibrosis; fibrotic lung disease; =UIP
+fr: Fibrose pulmonaire | pneumopathie fibrosante; =PIC
+
+@nsip
+de: nicht-spezifische interstitielle Pneumonie | nichtspezifische interstitielle Pneumonie; unspezifische interstitielle Pneumonie; =NSIP | Interstitielle Lungenerkrankung mit zeitlich und räumlich einheitlichem Muster. Im CT typischerweise beidseitige, basal und peripher betonte Milchglastrübungen, oft mit Retikulationen und Traktionsbronchiektasen.
+en: Nonspecific interstitial pneumonia | non-specific interstitial pneumonia; =NSIP | Interstitial lung disease with a temporally and spatially uniform pattern. On CT typically bilateral ground-glass opacities with basal and peripheral predominance, often with reticulation and traction bronchiectasis.
+fr: Pneumopathie interstitielle non spécifique | =PINS; =NSIP | Pneumopathie interstitielle d'aspect homogène dans le temps et l'espace. Au scanner, verre dépoli bilatéral à prédominance basale et périphérique, souvent avec réticulations et bronchectasies de traction.
+
+@organizing-pneumonia
+de: organisierende Pneumonie | kryptogen organisierende Pneumonie; =COP; =BOOP | Reparaturmuster der Lunge mit Granulationsgewebe in den Alveolen; im CT fleckige, oft subpleurale oder peribronchovaskuläre Konsolidierungen und Milchglastrübungen.
+en: Organizing pneumonia | organising pneumonia; cryptogenic organizing pneumonia; =COP | Repair pattern of the lung with granulation tissue filling the alveoli; on CT patchy, often subpleural or peribronchovascular consolidation and ground-glass opacities.
+fr: Pneumopathie organisée | pneumopathie organisée cryptogénique; =POC | Mode de réparation pulmonaire avec bourgeons de granulation intra-alvéolaires ; au scanner, condensations et verre dépoli en plages, souvent sous-pleuraux ou péribronchovasculaires.
+
+@viral-pneumonia
+de: virale Pneumonie | Viruspneumonie; COVID-19-Pneumonie
+en: Viral pneumonia | COVID-19 pneumonia
+fr: Pneumopathie virale | pneumonie virale; pneumopathie COVID-19
+
+@atypical-pneumonia
+de: atypische Pneumonie | atypische bakterielle Pneumonie; interstitielle Pneumonie
+en: Atypical pneumonia | atypical bacterial pneumonia
+fr: Pneumopathie atypique | pneumonie atypique
+
+@hemangioma
+de: Hämangiom | Leberhämangiom
+en: Hemangioma | haemangioma; hepatic hemangioma
+fr: Hémangiome | angiome; angiome hépatique
+
+## symptom
+
+@fever
+de: Fieber | febril
+en: Fever | febrile
+fr: Fièvre | fébrile
+
+@cough
+de: Husten | produktiver Husten; Reizhusten
+en: Cough | productive cough
+fr: Toux | toux productive
+
+@dyspnea
+de: Dyspnoe | Atemnot; Belastungsdyspnoe; Luftnot
+en: Dyspnea | dyspnoea; shortness of breath; exertional dyspnea
+fr: Dyspnée | dyspnée d'effort; essoufflement
+
+@hemiparesis
+de: Hemiparese | Halbseitenlähmung; Hemiplegie
+en: Hemiparesis | hemiplegia
+fr: Hémiparésie | hémiplégie
+
+@aphasia
+de: Aphasie
+en: Aphasia
+fr: Aphasie
+
+## anatomy
+
+@lung | UBERON:0002048
+de: Lunge | Lungen; Lungenparenchym; Lungenflügel
+en: Lung | lung parenchyma; pulmonary parenchyma
+fr: Poumon | parenchyme pulmonaire
+
+@upper-lobe
+de: Oberlappen | Lungenoberlappen
+en: Upper lobe
+fr: Lobe supérieur
+
+@middle-lobe
+de: Mittellappen
+en: Middle lobe
+fr: Lobe moyen
+
+@lower-lobe
+de: Unterlappen | Lungenunterlappen
+en: Lower lobe
+fr: Lobe inférieur
+
+@lingula
+de: Lingula
+en: Lingula
+fr: Lingula
+
+@pleura
+de: Pleura | Pleuraspalt; Pleuraraum; Pleurahöhle
+en: Pleura | pleural space; pleural cavity
+fr: Plèvre | cavité pleurale; espace pleural
+
+@mediastinum
+de: Mediastinum
+en: Mediastinum
+fr: Médiastin
+
+@hilum
+de: Lungenhilus | Hilus; Hili
+en: Hilum | hila; pulmonary hilum
+fr: Hile | hile pulmonaire
+
+@trachea
+de: Trachea | Luftröhre
+en: Trachea
+fr: Trachée
+
+@bronchus
+de: Bronchus | Bronchien; Bronchi; Bronchialsystem
+en: Bronchus | bronchi; bronchial tree
+fr: Bronche | arbre bronchique
+
+@heart | UBERON:0000948
+de: Herz | Herzens
+en: Heart | cardiac silhouette
+fr: Cœur | silhouette cardiaque
+
+@pericardium
+de: Perikard | Herzbeutel
+en: Pericardium
+fr: Péricarde
+
+@aorta | UBERON:0000947
+de: Aorta | Aorta thoracica; Aorta abdominalis; Aortenbogen
+en: Aorta | thoracic aorta; abdominal aorta; aortic arch
+fr: Aorte | aorte thoracique; aorte abdominale; crosse aortique
+
+@pulmonary-artery
+de: Pulmonalarterie | Pulmonalarterien; Arteria pulmonalis; Truncus pulmonalis
+en: Pulmonary artery | pulmonary arteries; pulmonary trunk
+fr: Artère pulmonaire | artères pulmonaires; tronc pulmonaire
+
+@diaphragm
+de: Zwerchfell | Diaphragma
+en: Diaphragm | hemidiaphragm
+fr: Diaphragme | coupole diaphragmatique
+
+@liver | UBERON:0002107
+de: Leber | Leberparenchym
+en: Liver | hepatic parenchyma
+fr: Foie | parenchyme hépatique
+
+@gallbladder
+de: Gallenblase
+en: Gallbladder
+fr: Vésicule biliaire
+
+@bile-ducts
+de: Gallenwege | Gallengang; Ductus choledochus; =DHC
+en: Bile ducts | bile duct; common bile duct; biliary tree; =CBD
+fr: Voies biliaires | voie biliaire principale; cholédoque; =VBP
+
+@spleen
+de: Milz
+en: Spleen
+fr: Rate
+
+@pancreas
+de: Pankreas | Bauchspeicheldrüse
+en: Pancreas
+fr: Pancréas
+
+@kidney | UBERON:0002113
+de: Niere | Nieren
+en: Kidney
+fr: Rein
+
+@adrenal-gland
+de: Nebenniere | Nebennieren
+en: Adrenal gland | adrenals
+fr: Surrénale | glande surrénale
+
+@urinary-bladder
+de: Harnblase
+en: Urinary bladder | bladder
+fr: Vessie
+
+@stomach
+de: Magen
+en: Stomach
+fr: Estomac
+
+@small-bowel
+de: Dünndarm | Dünndarmschlingen
+en: Small bowel | small intestine; small bowel loops
+fr: Intestin grêle | grêle; anses grêles
+
+@colon
+de: Kolon | Colon; Dickdarm
+en: Colon | large bowel
+fr: Côlon | cadre colique
+
+@sigmoid
+de: Sigma | Colon sigmoideum
+en: Sigmoid colon | sigmoid
+fr: Sigmoïde | côlon sigmoïde
+
+@appendix
+de: Appendix | Appendix vermiformis
+en: Appendix
+fr: Appendice
+
+@prostate
+de: Prostata
+en: Prostate
+fr: Prostate
+
+@uterus
+de: Uterus | Gebärmutter
+en: Uterus
+fr: Utérus
+
+@ovary
+de: Ovar | Ovarien; Eierstock
+en: Ovary | ovaries
+fr: Ovaire
+
+@lymph-node
+de: Lymphknoten
+en: Lymph node
+fr: Ganglion | ganglion lymphatique
+
+@brain | UBERON:0000955
+de: Gehirn | Hirn; Hirnparenchym
+en: Brain | brain parenchyma; cerebral parenchyma
+fr: Cerveau | parenchyme cérébral; encéphale
+
+@ventricles
+de: Ventrikelsystem | Seitenventrikel; innere Liquorräume
+en: Ventricular system | lateral ventricles; ventricles
+fr: Système ventriculaire | ventricules latéraux; ventricules
+
+@cerebellum
+de: Kleinhirn | Cerebellum
+en: Cerebellum
+fr: Cervelet
+
+@brainstem
+de: Hirnstamm
+en: Brainstem | brain stem
+fr: Tronc cérébral
+
+@white-matter
+de: Marklager | weiße Substanz
+en: White matter
+fr: Substance blanche
+
+@basal-ganglia
+de: Basalganglien | Stammganglien
+en: Basal ganglia
+fr: Noyaux gris centraux
+
+@skull
+de: Schädel | Kalotte; Schädelkalotte
+en: Skull | calvarium
+fr: Crâne | voûte crânienne
+
+@spine
+de: Wirbelsäule
+en: Spine | vertebral column
+fr: Rachis | colonne vertébrale
+
+@cervical-spine
+de: Halswirbelsäule | =HWS
+en: Cervical spine
+fr: Rachis cervical
+
+@thoracic-spine
+de: Brustwirbelsäule | =BWS
+en: Thoracic spine
+fr: Rachis dorsal | rachis thoracique
+
+@lumbar-spine
+de: Lendenwirbelsäule | =LWS
+en: Lumbar spine
+fr: Rachis lombaire
+
+@vertebral-body
+de: Wirbelkörper
+en: Vertebral body | vertebral bodies
+fr: Corps vertébral | corps vertébraux
+
+@intervertebral-disc
+de: Bandscheibe | Bandscheiben; Bandscheibenfach
+en: Intervertebral disc | disc; disk
+fr: Disque intervertébral | disque
+
+@spinal-canal
+de: Spinalkanal
+en: Spinal canal
+fr: Canal rachidien | canal vertébral
+
+@femur
+de: Femur | Oberschenkelknochen
+en: Femur
+fr: Fémur
+
+@tibia
+de: Tibia | Schienbein
+en: Tibia
+fr: Tibia
+
+@knee
+de: Knie | Kniegelenk
+en: Knee | knee joint
+fr: Genou
+
+@hip
+de: Hüfte | Hüftgelenk
+en: Hip | hip joint
+fr: Hanche
+
+@shoulder
+de: Schulter | Schultergelenk
+en: Shoulder
+fr: Épaule
+
+@meniscus
+de: Meniskus | Menisken; Innenmeniskus; Außenmeniskus
+en: Meniscus | menisci; medial meniscus; lateral meniscus
+fr: Ménisque | ménisque interne; ménisque externe
+
+@acl
+de: vorderes Kreuzband | =VKB
+en: Anterior cruciate ligament | =ACL
+fr: Ligament croisé antérieur | =LCA
+
+@rib
+de: Rippe | Rippen
+en: Rib
+fr: Côte | arc costal
+
+@portal-vein
+de: Pfortader | Vena portae
+en: Portal vein
+fr: Veine porte | tronc porte
+
+@liver-lobe
+de: Leberlappen | rechter Leberlappen; linker Leberlappen; Lobus caudatus
+en: Hepatic lobe | right hepatic lobe; left hepatic lobe; caudate lobe; right lobe of the liver; left lobe of the liver
+fr: Lobe hépatique | foie droit; foie gauche; lobe caudé
+
+@middle-cerebral-artery
+de: Arteria cerebri media | A. cerebri media; Mediastromgebiet; =ACM
+en: Middle cerebral artery | MCA territory; =MCA
+fr: Artère cérébrale moyenne | artère sylvienne; territoire sylvien; =ACM
+
+@internal-carotid-artery
+de: Arteria carotis interna | A. carotis interna; =ACI
+en: Internal carotid artery | =ICA
+fr: Artère carotide interne | carotide interne; =ACI
+
+@insula
+de: Inselrinde | Insel; Insula
+en: Insula | insular cortex; insular ribbon
+fr: Insula | cortex insulaire; ruban insulaire
+
+@humerus
+de: Humerus | Oberarm; Oberarmknochen; Humeruskopf; Humerusschaft
+en: Humerus | upper arm; humeral head; humeral shaft
+fr: Humérus | tête humérale; diaphyse humérale; bras
+
+@greater-tuberosity
+de: Tuberculum majus
+en: Greater tuberosity | greater tubercle
+fr: Tubercule majeur | trochiter; grosse tubérosité
+
+@surgical-neck
+de: Collum chirurgicum | chirurgischer Hals
+en: Surgical neck
+fr: Col chirurgical
+
+@glenoid
+de: Glenoid | Cavitas glenoidalis; Schulterpfanne
+en: Glenoid | glenoid fossa
+fr: Glène | cavité glénoïdale
+
+@ac-joint
+de: Akromioklavikulargelenk | AC-Gelenk; Schultereckgelenk; =ACG
+en: Acromioclavicular joint | AC joint
+fr: Articulation acromio-claviculaire
+
+@lung-base
+de: Lungenbasis | Lungenbasen; Unterfeld; Unterfelder
+en: Lung base | lung bases; lower zone
+fr: Base pulmonaire | bases pulmonaires
+
+## procedure
+
+@dwi
+de: DWI | Diffusionswichtung; diffusionsgewichtete Sequenz
+en: DWI | diffusion-weighted imaging; diffusion-weighted sequence
+fr: Séquence de diffusion | imagerie de diffusion; =DWI
+
+@adc
+de: ADC | ADC-Karte
+en: ADC | ADC map
+fr: ADC | cartographie ADC; carte ADC
+
+@flair
+de: FLAIR | FLAIR-Sequenz
+en: FLAIR | FLAIR sequence
+fr: FLAIR | séquence FLAIR
+
+@tof-angiography
+de: TOF-Angiographie | TOF-MRA; =TOF
+en: TOF angiography | time-of-flight angiography; TOF MRA; =TOF
+fr: Angio-IRM en temps de vol | séquence TOF; =TOF
+
+@thrombectomy
+de: Thrombektomie | mechanische Thrombektomie; mechanische Rekanalisation
+en: Thrombectomy | mechanical thrombectomy; endovascular thrombectomy
+fr: Thrombectomie | thrombectomie mécanique
+
+@thrombolysis
+de: Lyse | Thrombolyse; systemische Lyse; Lysetherapie
+en: Thrombolysis | intravenous thrombolysis; =tPA
+fr: Thrombolyse | thrombolyse intraveineuse; fibrinolyse
+
+@ct
+de: CT | Computertomographie; Computertomografie
+en: CT | computed tomography; CT scan
+fr: Scanner | tomodensitométrie; =TDM
+
+@mri
+de: MRT | Magnetresonanztomographie; Magnetresonanztomografie; Kernspintomographie; =MRI
+en: MRI | magnetic resonance imaging; MR imaging
+fr: IRM | imagerie par résonance magnétique
+
+@radiograph
+de: Röntgen | Röntgenaufnahme; Röntgenbild; Röntgen-Thorax
+en: Radiograph | X-ray; chest X-ray; chest radiograph; plain film
+fr: Radiographie | radiographie thoracique; radiographie standard; cliché
+
+@ultrasound
+de: Sonographie | Sonografie; Ultraschall
+en: Ultrasound | sonography; ultrasonography
+fr: Échographie
+
+@pet-ct
+de: PET-CT | PET/CT; =PET
+en: PET-CT | PET/CT; =PET
+fr: TEP | TEP-scanner; TEP-TDM
+
+@angiography
+de: Angiographie | Angiografie; CT-Angiographie; =CTA; =MRA
+en: Angiography | CT angiography; MR angiography; =CTA; =MRA
+fr: Angiographie | angioscanner; angio-IRM; angio-TDM
+
+@mammography
+de: Mammographie | Mammografie
+en: Mammography
+fr: Mammographie
+
+## substance
+
+@contrast-medium
+de: Kontrastmittel | Kontrastmittelgabe; =KM
+en: Contrast medium | contrast agent; contrast material; intravenous contrast; IV contrast
+fr: Produit de contraste | injection de produit de contraste; =PDC

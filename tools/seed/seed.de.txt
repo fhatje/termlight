@@ -1,0 +1,741 @@
+# Source of public/packs/seed.de.json (CC0). Rebuild with: node tools/build-seed.ts
+#
+# One concept per line:   Label | terms; separated; by; semicolon | SYSTEM:code, ... | definition
+# A term prefixed with "=" only matches in exactly this letter case (abbreviations, ambiguous
+# short words). Regular German inflection (Pneumonien, Ergusses, "des vorderen Kreuzbandes",
+# umlaut plurals like Ergüsse) is handled by the matcher; list irregular forms explicitly.
+# "## type" starts a section.
+
+## anatomy
+Herz | Cor; Herzens; Herzen | UBERON:0000948 | Muskuläres Hohlorgan, das den Blutkreislauf antreibt.
+Lunge | Pulmo; Lungenparenchym; Lungenflügel; Lungengewebe | UBERON:0002048 | Paariges Atmungsorgan im Thorax.
+Oberlappen | Lungenoberlappen | | Kranialer Lungenlappen.
+Mittellappen | Lungenmittellappen | | Mittlerer Lappen der rechten Lunge.
+Unterlappen | Lungenunterlappen | | Kaudaler Lungenlappen.
+Lingula | Lingula pulmonis
+Lungenhilus | Hilus; Hili; Lungenhili
+Pleura | Rippenfell; Brustfell; Pleuraspalt; Pleuraraum; Pleurahöhle | | Seröse Haut, die Lunge und Brustwand überzieht.
+Mediastinum | Mittelfell | | Raum zwischen den beiden Pleurahöhlen.
+Trachea | Luftröhre
+Bronchus | Bronchien; Bronchi; Hauptbronchus; Bronchialsystem
+Zwerchfell | Diaphragma
+Thorax | Brustkorb | | Brustkorb mit seinen Organen.
+Thoraxwand | Brustwand
+Aorta | Hauptschlagader | UBERON:0000947
+Aorta thoracica | thorakale Aorta; Brustaorta
+Aorta abdominalis | Bauchaorta; abdominelle Aorta
+Aorta ascendens
+Aorta descendens
+Aortenbogen | Arcus aortae
+Truncus pulmonalis | Pulmonalisstamm; Pulmonalishauptstamm
+Pulmonalarterie | Arteria pulmonalis; A. pulmonalis; Lungenarterie; Pulmonalarterienast
+Pulmonalvene | Lungenvene; Vena pulmonalis
+Vena cava | Hohlvene; V. cava
+Vena cava superior | obere Hohlvene; V. cava superior; =VCS
+Vena cava inferior | untere Hohlvene; V. cava inferior; =VCI
+Ventrikel | Herzkammer
+rechter Ventrikel | rechte Herzkammer; =RV
+linker Ventrikel | linke Herzkammer; =LV
+Vorhof | Atrium; Herzvorhof; Vorhöfe
+Perikard | Herzbeutel
+Myokard | Herzmuskel
+Koronararterie | Koronarien; Herzkranzgefäß; Koronargefäß; Herzkranzarterie
+Herzklappe
+Aortenklappe
+Mitralklappe
+Trikuspidalklappe
+Pulmonalklappe
+Leber | Hepar; Leberparenchym | UBERON:0002107 | Großes parenchymatöses Organ des rechten Oberbauchs.
+Gallenblase | Vesica fellea; Vesica biliaris
+Gallengang | Gallenwege; Gallengänge; Ductus choledochus; =DHC; Ductus hepaticus
+Pankreas | Bauchspeicheldrüse | UBERON:0001264
+Milz | Splen | UBERON:0002106
+Niere | Nieren; Nierenparenchym | UBERON:0002113 | Paariges retroperitoneales Organ des Harnsystems.
+Nierenbecken | Nierenbeckenkelchsystem; =NBKS; Pyelon
+Nebenniere | Glandula suprarenalis
+Harnblase | Vesica urinaria; Blase
+Ureter | Harnleiter; Ureteren
+Urethra | Harnröhre
+Prostata | Vorsteherdrüse
+Uterus | Gebärmutter
+Ovar | Eierstock; Ovarien; Ovarium; Ovars
+Hoden | Testis; Testes
+Magen | Gaster; Magens
+Ösophagus | Speiseröhre; Oesophagus
+Duodenum | Zwölffingerdarm
+Jejunum | Leerdarm
+Ileum | Krummdarm
+Dünndarm | Dünndarmschlinge; Dünndarmschlingen
+Kolon | Dickdarm; Colon; Kolonrahmen
+Sigma | Colon sigmoideum; Sigmoid
+Rektum | Enddarm; Mastdarm; Rectum
+Zökum | Caecum; Zäkum; Coecum
+Appendix vermiformis | Appendix; Wurmfortsatz; Blinddarm
+Darm | Darmschlinge; Darmschlingen; Darmwand; Darms
+Peritoneum | Bauchfell
+Retroperitoneum | Retroperitonealraum
+Mesenterium | Gekröse
+Abdomen | Bauch; Bauchraum; Bauchhöhle
+Oberbauch | Oberbauchorgane
+Unterbauch
+Becken | Pelvis; kleines Becken
+Leiste | Leistenregion; Inguinalregion
+Lymphknoten | Nodus lymphoideus; Lymphknotenstation; =LK | UBERON:0000029
+Schilddrüse | Thyreoidea; Glandula thyroidea | UBERON:0002046
+Gehirn | Hirn; Cerebrum; Enzephalon; Hirnparenchym | UBERON:0000955
+Großhirn | Großhirnhemisphäre; Hemisphäre
+Kleinhirn | Cerebellum; Zerebellum
+Hirnstamm | Truncus cerebri
+Pons
+Marklager | weiße Substanz; Hirnmarklager
+Hirnrinde | Kortex; Cortex; graue Substanz
+Basalganglien | Stammganglien
+Thalamus
+Hippocampus | Hippokampus
+Hypophyse | Hirnanhangsdrüse
+Corpus callosum
+Frontallappen | Stirnlappen; Lobus frontalis
+Temporallappen | Schläfenlappen; Lobus temporalis
+Parietallappen | Scheitellappen; Lobus parietalis
+Okzipitallappen | Hinterhauptslappen; Lobus occipitalis
+Hirnventrikel | Seitenventrikel; Ventrikelsystem; dritter Ventrikel; vierter Ventrikel
+Liquorraum | Liquorräume; äußere Liquorräume; innere Liquorräume; Subarachnoidalraum
+Meningen | Hirnhäute; Hirnhaut; Dura mater; Dura
+Schädel | Cranium; Kalotte; Schädelkalotte; Neurokranium
+Schädelbasis
+Orbita | Augenhöhle; Orbitae
+Auge | Augen; Bulbus oculi
+Ohr | Ohren; Ohres; Ohrs
+Felsenbein | Mastoid; Mastoidzellen
+Nase | Nasenhaupthöhle
+Nasennebenhöhlen | Nasennebenhöhle; =NNH; Kieferhöhle; Stirnhöhle; Keilbeinhöhle; Siebbeinzellen; Sinus maxillaris
+Mund | Mundhöhle
+Zunge
+Zahn | Zähne; Zahns
+Rachen | Pharynx; Nasopharynx; Oropharynx; Hypopharynx
+Kehlkopf | Larynx
+Hals | Halses; Halsweichteile
+Kopf | Kopfes; Kopfs
+Wirbelsäule | Columna vertebralis | UBERON:0001130
+Halswirbelsäule | =HWS
+Brustwirbelsäule | =BWS
+Lendenwirbelsäule | =LWS
+Wirbelkörper | Wirbel; =WK; Lendenwirbelkörper; Brustwirbelkörper; Halswirbelkörper; =LWK; =BWK; =HWK
+Bandscheibe | Discus intervertebralis; Zwischenwirbelscheibe; Bandscheibenfach
+Spinalkanal | Wirbelkanal
+Rückenmark | Myelon; Medulla spinalis
+Neuroforamen | Neuroforamina; Foramen intervertebrale
+Kreuzbein | Os sacrum; Sakrum; Sacrum
+Steißbein | Os coccygis
+Iliosakralgelenk | =ISG; Sakroiliakalgelenk; Iliosakralfuge
+Rippe | Costa
+Sternum | Brustbein
+Klavikula | Schlüsselbein; Clavicula
+Skapula | Schulterblatt; Scapula
+Schulter | Schultergelenk; Glenohumeralgelenk
+Humerus | Oberarmknochen; Humeruskopf; Humerusschaft
+Ellenbogen | Ellenbogengelenk; Ellbogen
+Radius | Radiusköpfchen; distaler Radius
+Ulna
+Handgelenk | Handwurzel; Karpus
+Hand | Mittelhand
+Finger | Fingers
+Daumen | Daumens
+Arm | Arme; Armes; Arms
+Oberarm
+Unterarm
+Hüfte | Hüftgelenk; Hüftgelenke
+Femur | Oberschenkelknochen; Femurschaft
+Femurkopf | Hüftkopf; Caput femoris
+Schenkelhals | Femurhals; Collum femoris
+Femurkondylus | Femurkondyle; Femurkondylen
+Oberschenkel
+Knie | Knies; Kniegelenk; Kniegelenks; Kniegelenkes | | Gelenk zwischen Femur, Tibia und Patella.
+Patella | Kniescheibe; Patellafacette
+Tibia | Schienbein
+Tibiaplateau | Tibiakopf
+Fibula | Wadenbein
+Unterschenkel
+Wade | Wadenmuskulatur
+Sprunggelenk | oberes Sprunggelenk; unteres Sprunggelenk; =OSG
+Fuß | Fußes; Mittelfuß; Vorfuß; Rückfuß
+Ferse | Kalkaneus; Calcaneus; Fersenbein
+Zehe | Zeh; Zehen
+Bein | untere Extremität
+Extremität | obere Extremität
+Meniskus | Menisci; Menisken; Meniskushinterhorn; Meniskusvorderhorn; Hinterhorn; Vorderhorn
+Innenmeniskus | medialer Meniskus; Innenmeniskushinterhorn; Innenmeniskusvorderhorn | | Medialer Faserknorpelring des Kniegelenks.
+Außenmeniskus | lateraler Meniskus; Außenmeniskushinterhorn; Außenmeniskusvorderhorn | | Lateraler Faserknorpelring des Kniegelenks.
+Kreuzband | Kreuzbänder
+vorderes Kreuzband | =VKB; Ligamentum cruciatum anterius | | Intraartikuläres Band zur Stabilisierung des Kniegelenks.
+hinteres Kreuzband | =HKB; Ligamentum cruciatum posterius | | Intraartikuläres Band zur posterioren Stabilisierung des Kniegelenks.
+Kollateralband | Seitenband; Kollateralbänder
+mediales Kollateralband | Innenband; mediales Seitenband; =MCL
+laterales Kollateralband | Außenband; laterales Seitenband; =LCL
+Quadrizepssehne
+Patellarsehne | Ligamentum patellae
+Popliteussehne
+Achillessehne
+Rotatorenmanschette
+Supraspinatussehne
+Bizepssehne | lange Bizepssehne
+Sehne | Sehnen
+Ligament | Ligamentum; Ligamenta
+Knorpel | Gelenkknorpel; Knorpelbelag
+Gelenk | Gelenkfläche; Gelenkspalt; Gelenkkapsel
+Knochen | Knochenstruktur; Kortikalis; Spongiosa
+Knochenmark
+Muskel | Muskulatur; Musculus
+Haut | Cutis; Kutis
+Subkutis | Unterhaut; subkutanes Fettgewebe; Unterhautfettgewebe
+Fettgewebe
+Weichteile | Weichteilgewebe; Weichteilmantel
+Arterie | Arteria; Arterien
+Vene | Vena
+Gefäß | Blutgefäß; Gefäße; Gefäßwand
+Pfortader | Vena portae; V. portae; Portalvene
+Lebervene | Lebervenen; Venae hepaticae
+Arteria carotis | A. carotis; Karotis; Halsschlagader; Karotiden; Arteria carotis communis; =ACC
+Arteria carotis interna | A. carotis interna; =ACI
+Arteria cerebri media | A. cerebri media; =ACM
+Arteria cerebri anterior | A. cerebri anterior; =ACA
+Arteria cerebri posterior | A. cerebri posterior; =ACP
+Arteria vertebralis | A. vertebralis; Vertebralarterie
+Arteria basilaris | A. basilaris
+Arteria subclavia | A. subclavia
+Arteria femoralis | A. femoralis; Femoralarterie
+Arteria iliaca | A. iliaca; Beckenarterie; Iliakalarterie
+Nierenarterie | Arteria renalis; A. renalis
+Truncus coeliacus
+Arteria mesenterica superior | A. mesenterica superior; =AMS
+Vena jugularis | V. jugularis; Jugularvene
+Vena femoralis | V. femoralis; Femoralvene
+Vena poplitea | V. poplitea
+Sinus sagittalis superior
+Nerv | Nervus; Nerven
+Nervenwurzel | Spinalnerv
+Nervus ischiadicus | N. ischiadicus; Ischiasnerv
+Nervus medianus | N. medianus
+Sehnerv | Nervus opticus; N. opticus
+Plexus brachialis
+Brust | Mamma; Brustdrüse; Mammae; Brustdrüsengewebe
+Axilla | Achselhöhle; Axillae; Achsel
+Blut | Blutes
+Liquor | Liquor cerebrospinalis; Hirnwasser
+Urin | Harn
+
+## disease
+Pneumonie | Lungenentzündung; Bronchopneumonie; Lobärpneumonie; Aspirationspneumonie | ICD-10-GM:J18.9 | Entzündliche Infiltration des Lungenparenchyms.
+Lungenembolie | Pulmonalarterienembolie; pulmonale Embolie; Lungenarterienembolie; =LAE; =LE | ICD-10-GM:I26.9 | Embolischer Verschluss einer Pulmonalarterie oder eines ihrer Äste.
+COPD | chronisch obstruktive Lungenerkrankung; chronisch-obstruktive Lungenerkrankung | ICD-10-GM:J44.9
+Asthma bronchiale | Asthma | ICD-10-GM:J45.9
+Bronchitis | akute Bronchitis; chronische Bronchitis
+Lungenemphysem | Emphysem
+Lungenfibrose | pulmonale Fibrose
+Tuberkulose | =Tbc; =TBC; Lungentuberkulose
+Lungenkarzinom | Bronchialkarzinom; Lungenkrebs; =NSCLC; =SCLC | ICD-10-GM:C34.9
+Herzinsuffizienz | Herzschwäche; Linksherzinsuffizienz; Rechtsherzinsuffizienz | ICD-10-GM:I50.9
+Myokardinfarkt | Herzinfarkt; =STEMI; =NSTEMI | ICD-10-GM:I21.9
+koronare Herzkrankheit | =KHK; koronare Herzerkrankung | ICD-10-GM:I25.9
+Vorhofflimmern | =VHF; Vorhofflimmerarrhythmie | ICD-10-GM:I48.9
+arterielle Hypertonie | Hypertonie; Bluthochdruck; Hypertonus | ICD-10:I10
+Aortenaneurysma | Bauchaortenaneurysma; =BAA; thorakales Aortenaneurysma
+Aortendissektion
+Aortenklappenstenose | Aortenstenose
+tiefe Venenthrombose | =TVT; Beinvenenthrombose; Phlebothrombose; tiefe Beinvenenthrombose | ICD-10-GM:I80.2
+Thrombose | Venenthrombose
+periphere arterielle Verschlusskrankheit | =pAVK; =PAVK
+Arteriosklerose | Atherosklerose; Gefäßsklerose
+Schlaganfall | Apoplex; Hirninfarkt; ischämischer Infarkt; Insult; zerebrale Ischämie; ischämischer Schlaganfall | ICD-10-GM:I63.9
+Ischämie | Minderdurchblutung | | Gewebeschädigung infolge einer verminderten arteriellen Durchblutung.
+transitorische ischämische Attacke | =TIA
+intrakranielle Blutung | Hirnblutung; intrazerebrale Blutung; =ICB; hämorrhagische Transformation | | Blutung innerhalb des Schädels.
+Subarachnoidalblutung | =SAB
+Subduralhämatom | subdurales Hämatom; =SDH
+Epiduralhämatom | epidurales Hämatom
+Sinusvenenthrombose | Hirnvenenthrombose
+Multiple Sklerose | =MS; Encephalomyelitis disseminata | ICD-10-GM:G35
+Epilepsie | ICD-10-GM:G40.9
+Demenz
+Alzheimer-Krankheit | Morbus Alzheimer; Alzheimer-Demenz
+Morbus Parkinson | Parkinson-Krankheit; Parkinson-Syndrom
+Meningitis | Hirnhautentzündung
+Enzephalitis
+Hydrozephalus | Hydrocephalus
+Migräne
+Diabetes mellitus | Diabetes; Zuckerkrankheit; Diabetes mellitus Typ 2; Typ-2-Diabetes; Diabetes mellitus Typ 1; Typ-1-Diabetes | ICD-10-GM:E14.9
+Hypothyreose | Schilddrüsenunterfunktion | ICD-10-GM:E03.9
+Hyperthyreose | Schilddrüsenüberfunktion | ICD-10-GM:E05.9
+Struma | Schilddrüsenvergrößerung
+Adipositas | Fettleibigkeit | ICD-10-GM:E66.9
+Niereninsuffizienz | chronische Niereninsuffizienz; Nierenversagen; akutes Nierenversagen; chronische Nierenerkrankung
+Nephrolithiasis | Nierenstein; Nierensteine; Urolithiasis; Harnleiterstein | ICD-10-GM:N20.0
+Harnwegsinfekt | =HWI; Harnwegsinfektion; Zystitis; Blasenentzündung | ICD-10-GM:N39.0
+Pyelonephritis | Nierenbeckenentzündung
+Divertikulitis | Sigmadivertikulitis | | Entzündliche Veränderung eines oder mehrerer Darmdivertikel.
+Divertikulose | Sigmadivertikulose
+Appendizitis | Blinddarmentzündung; Appendicitis
+Cholezystitis | Gallenblasenentzündung | ICD-10-GM:K81.9
+Cholezystolithiasis | Gallenstein; Gallensteine; Cholelithiasis; Gallenblasenstein | ICD-10-GM:K80.2
+Choledocholithiasis | Gallengangsstein
+Pankreatitis | Bauchspeicheldrüsenentzündung; akute Pankreatitis | ICD-10-GM:K85.9
+Leberzirrhose | Zirrhose | ICD-10-GM:K74.6
+Hepatitis | Leberentzündung
+Steatosis hepatis | Fettleber; Lebersteatose; Leberverfettung
+Ileus | Darmverschluss; Subileus; Dünndarmileus
+Gastritis | Magenschleimhautentzündung
+Ulkus | Ulcus; Magengeschwür; Ulcus ventriculi; Ulcus duodeni; Ulzera
+Refluxkrankheit | =GERD; Refluxösophagitis; gastroösophagealer Reflux
+Morbus Crohn
+Colitis ulcerosa
+Kolonkarzinom | Darmkrebs; kolorektales Karzinom; Rektumkarzinom
+Hernie | Leistenhernie; Hiatushernie; Leistenbruch; Nabelhernie; Narbenhernie
+Karzinom | Krebs; Malignom; Carcinom; Karzinome
+Tumor | Neoplasie; Neubildung; Tumoren; Tumore
+Metastase | Filia; Filiae; Tochtergeschwulst; Lebermetastase; Lungenmetastase; Knochenmetastase; Hirnmetastase; Lymphknotenmetastase
+Lymphom | Non-Hodgkin-Lymphom; Hodgkin-Lymphom
+Leukämie
+Mammakarzinom | Brustkrebs | ICD-10-GM:C50.9
+Prostatakarzinom | Prostatakrebs | ICD-10-GM:C61
+hepatozelluläres Karzinom | =HCC; Leberzellkarzinom
+Pankreaskarzinom | Bauchspeicheldrüsenkrebs
+Nierenzellkarzinom | =NCC
+Glioblastom | Gliom
+Meningeom
+Melanom | malignes Melanom
+Sepsis | Blutvergiftung; septischer Schock | ICD-10-GM:A41.9
+Infektion | Infekt; Infektionen
+Arthrose | Gonarthrose; Koxarthrose; Coxarthrose; Omarthrose
+Arthritis | Gelenkentzündung
+rheumatoide Arthritis
+Osteoporose | ICD-10-GM:M81.9
+Osteomyelitis
+Gicht | Arthritis urica
+Bandscheibenvorfall | Diskusprolaps; Bandscheibenprolaps; Prolaps; Nucleus-pulposus-Prolaps
+Bandscheibenprotrusion | Protrusion; Bandscheibenvorwölbung
+Spinalkanalstenose | spinale Stenose
+Spondylarthrose | Facettengelenksarthrose
+Osteochondrose
+Spondylodiszitis
+Skoliose
+Anämie | Blutarmut | ICD-10-GM:D64.9
+Depression | depressive Episode
+COVID-19 | Covid; SARS-CoV-2-Infektion; Corona-Infektion; COVID-19-Pneumonie | ICD-10-GM:U07.1
+Influenza | Grippe
+Allergie | allergische Reaktion
+Anaphylaxie | anaphylaktischer Schock
+Agranulozytose
+Lungenödem
+Endokarditis
+Myokarditis
+Perikarditis
+Kardiomyopathie
+Mikroangiopathie | zerebrale Mikroangiopathie; mikroangiopathische Veränderungen
+
+## symptom
+Schmerz | Schmerzen; Schmerzsymptomatik
+Dyspnoe | Atemnot; Luftnot; Kurzatmigkeit; Belastungsdyspnoe | ICD-10-GM:R06.0
+Husten | Hustenreiz; Reizhusten | ICD-10-GM:R05
+Fieber | Pyrexie; Fiebers | ICD-10-GM:R50.9
+Thoraxschmerz | Brustschmerz; Brustschmerzen; Thoraxschmerzen; thorakale Schmerzen | ICD-10-GM:R07.4
+Kopfschmerz | Kopfschmerzen; Cephalgie; Zephalgie | ICD-10-GM:R51
+Bauchschmerz | Bauchschmerzen; abdominelle Schmerzen; Abdominalschmerz; Abdominalschmerzen
+Rückenschmerz | Rückenschmerzen; Lumbago; Lumbalgie; Lumboischialgie
+Flankenschmerz | Flankenschmerzen
+Übelkeit | Nausea
+Erbrechen | Emesis
+Diarrhö | Durchfall; Diarrhoe; Durchfälle
+Obstipation | Verstopfung | ICD-10-GM:K59.0
+Schwindel | Vertigo
+Synkope
+Schwellung | Weichteilschwellung
+Hämoptyse | Bluthusten; Hämoptysen
+Hämaturie
+Ikterus | Gelbsucht
+Tachykardie
+Bradykardie
+Hypotonie
+Parese | Lähmung; Hemiparese; Paresen
+Aphasie | Sprachstörung
+Sehstörung | Sehstörungen; Doppelbilder
+Krampfanfall | epileptischer Anfall; Krampfanfälle
+Bewusstlosigkeit | Bewusstseinsstörung; Vigilanzminderung
+Müdigkeit | Fatigue; Abgeschlagenheit
+Gewichtsverlust | Gewichtsabnahme
+Nachtschweiß
+Juckreiz | Pruritus
+Exanthem | Hautausschlag
+Streckhemmung | Streckdefizit
+Bewegungseinschränkung
+Dysphagie | Schluckstörung; Schluckbeschwerden
+Dysurie
+Palpitationen | Herzrasen
+Zyanose
+Stridor
+Schüttelfrost
+Kribbelparästhesien | Parästhesie; Parästhesien; Taubheitsgefühl
+
+## finding
+Pleuraerguss | Pleuralerguss; Pleuraergüsse; Randwinkelerguss | ICD-10-GM:J90 | Flüssigkeitsansammlung im Pleuraspalt.
+Erguss | Ergussbildung
+Perikarderguss
+Gelenkerguss | Kniegelenkerguss; Kniegelenkserguss | | Vermehrte Flüssigkeit innerhalb eines Gelenks.
+Aszites | freie Flüssigkeit; freie intraabdominelle Flüssigkeit
+Pneumothorax | Spannungspneumothorax | ICD-10-GM:J93.9
+Infiltrat | Infiltration; pneumonisches Infiltrat
+Konsolidierung | pulmonale Konsolidierung; Konsolidation | | Verdichtung des Lungenparenchyms mit Verdrängung der alveolären Luft.
+Milchglasinfiltrat | Milchglas; Milchglastrübung; Milchglasverdichtung; Milchglasareal | | Dichteanhebung der Lunge mit erkennbar bleibenden Gefäß- und Bronchialstrukturen.
+Atelektase | Dystelektase; Belüftungsstörung; Minderbelüftung
+Rundherd | Lungenrundherd; Nodulus; Noduli; Lungenherd
+Raumforderung | =RF; Läsion; Herdbefund; Herdläsion
+Zyste | Baker-Zyste; Nierenzyste; Leberzyste
+Abszess | perikolischer Abszess | | Abgekapselte entzündliche Flüssigkeitsansammlung.
+Flüssigkeitskollektion | Verhalt; Flüssigkeitsansammlung
+Stenose | Gefäßstenose | | Umschriebene Verengung eines Gefäßes oder Hohlorgans.
+Verschluss | Okklusion; Gefäßverschluss
+Thrombus | Thromben; Embolus
+Füllungsdefekt | Kontrastmittelaussparung
+Aneurysma | Aneurysmata
+Dissektion
+Verkalkung | Kalzifikation; Kalzifizierung; Kalk
+Plaque | Plaques
+Fraktur | Knochenbruch | | Kontinuitätsunterbrechung eines Knochens.
+Luxation | Subluxation
+Ruptur | Riss; Bandruptur; Sehnenruptur; Kreuzbandruptur; Meniskusriss; Teilruptur | | Teilweise oder vollständige Kontinuitätsunterbrechung einer Struktur.
+Knochenmarködem | Knochenödem; bone bruise | | Flüssigkeitssensitive Signalanhebung des Knochenmarks.
+Osteolyse | osteolytische Läsion
+Hämatom | Bluterguss; Einblutung
+Blutung | Hämorrhagie
+Ödem | Ödeme; Beinödem; Beinödeme; Hirnödem; Weichteilödem
+Lymphadenopathie | Lymphknotenvergrößerung; Lymphknotenschwellung
+Kardiomegalie | Herzvergrößerung
+Hepatomegalie
+Splenomegalie
+Stauung | pulmonalvenöse Stauung; Lungenstauung
+Bronchiektasen | Bronchiektasie
+Narbe | narbige Veränderung; narbige Veränderungen
+Fibrose
+Degeneration | degenerative Veränderung; degenerative Veränderungen
+Osteophyt | Spondylophyt
+Sklerose | Sklerosierung
+Nekrose
+Entzündung
+Perforation | freie Luft
+Divertikel
+Polyp
+Wandverdickung
+Ektasie | Dilatation
+Hydronephrose | Harnstau; Harnstauungsniere
+Konkrement
+Infarkt | Infarktareal; Lungeninfarkt; Lungeninfarktareal
+Rechtsherzbelastung
+Mittellinienverlagerung | Mittellinienshift
+Diffusionsstörung | Diffusionsrestriktion
+Kontrastmittelaufnahme | KM-Aufnahme; Kontrastmittelanreicherung; Enhancement
+Signalanhebung | Signalsteigerung; Hyperintensität; Signalalteration
+Hypodensität
+Hyperdensität
+Verschattung | Transparenzminderung
+Knorpeldefekt | Knorpelschaden
+Zerrung | Distorsion
+Kontusion | Prellung
+Dislokation | Fehlstellung
+Leukozytose
+Leukopenie
+Thrombozytopenie
+
+## medication
+Metamizol | Novalgin; Novaminsulfon; Metamizol-Natrium | ATC:N02BB02 | Nichtopioid-Analgetikum und Antipyretikum (Pyrazolon).
+Ibuprofen | ATC:M01AE01 | Nichtsteroidales Antirheumatikum (NSAR).
+Paracetamol | Acetaminophen | ATC:N02BE01 | Nichtopioid-Analgetikum und Antipyretikum.
+Acetylsalicylsäure | =ASS; Aspirin | ATC:N02BA01, ATC:B01AC06 | Thrombozytenaggregationshemmer und Analgetikum.
+Diclofenac | Voltaren | ATC:M01AB05
+Naproxen | ATC:M01AE02
+Morphin | Morphium | ATC:N02AA01
+Oxycodon | ATC:N02AA05
+Hydromorphon | ATC:N02AA03
+Fentanyl | ATC:N02AB03
+Tramadol | ATC:N02AX02
+Tilidin
+Piritramid | Dipidolor | ATC:N02AC03
+Heparin | unfraktioniertes Heparin; =UFH | ATC:B01AB01 | Antikoagulans zur parenteralen Anwendung.
+Enoxaparin | Clexane | ATC:B01AB05
+niedermolekulares Heparin | =NMH
+Phenprocoumon | Marcumar; Falithrom | ATC:B01AA04 | Vitamin-K-Antagonist zur oralen Antikoagulation.
+Warfarin | ATC:B01AA03
+Rivaroxaban | Xarelto | ATC:B01AF01
+Apixaban | Eliquis | ATC:B01AF02
+Edoxaban | Lixiana | ATC:B01AF03
+Dabigatran | Pradaxa | ATC:B01AE07
+Clopidogrel | Plavix | ATC:B01AC04
+Ticagrelor | ATC:B01AC24
+Prasugrel | ATC:B01AC22
+Metformin | ATC:A10BA02 | Orales Antidiabetikum (Biguanid).
+Insulin | Insulins
+Empagliflozin | Jardiance | ATC:A10BK03
+Dapagliflozin | ATC:A10BK01
+Sitagliptin | ATC:A10BH01
+Glimepirid | ATC:A10BB12
+Semaglutid | Ozempic
+Ramipril | ATC:C09AA05
+Enalapril | ATC:C09AA02
+Lisinopril | ATC:C09AA03
+Candesartan | ATC:C09CA06
+Valsartan | ATC:C09CA03
+Losartan | ATC:C09CA01
+Amlodipin | ATC:C08CA01
+Bisoprolol | ATC:C07AB07
+Metoprolol | ATC:C07AB02
+Carvedilol | ATC:C07AG02
+Nebivolol | ATC:C07AB12
+Hydrochlorothiazid | =HCT | ATC:C03AA03
+Furosemid | Lasix | ATC:C03CA01
+Torasemid | ATC:C03CA04
+Spironolacton | ATC:C03DA01
+Simvastatin | ATC:C10AA01
+Atorvastatin | ATC:C10AA05
+Rosuvastatin | ATC:C10AA07
+Digoxin | ATC:C01AA05
+Digitoxin | ATC:C01AA04
+Amiodaron | ATC:C01BD01
+Nitroglycerin | Glyceroltrinitrat
+Pantoprazol | Pantozol | ATC:A02BC02
+Omeprazol | ATC:A02BC01
+Esomeprazol | ATC:A02BC05
+Metoclopramid | =MCP | ATC:A03FA01
+Ondansetron | ATC:A04AA01
+Dimenhydrinat | Vomex
+Loperamid | ATC:A07DA03
+Macrogol | Movicol
+Lactulose
+Butylscopolamin | Buscopan
+Amoxicillin | ATC:J01CA04
+Amoxicillin/Clavulansäure | Amoxiclav; Amoxicillin-Clavulansäure
+Ampicillin/Sulbactam | Unacid; Ampicillin-Sulbactam
+Piperacillin/Tazobactam | Tazobac; Piperacillin-Tazobactam
+Penicillin
+Cefuroxim | ATC:J01DC02
+Ceftriaxon | Rocephin | ATC:J01DD04
+Meropenem | ATC:J01DH02
+Ciprofloxacin | ATC:J01MA02
+Levofloxacin | ATC:J01MA12
+Moxifloxacin | ATC:J01MA14
+Clarithromycin | ATC:J01FA09
+Azithromycin | ATC:J01FA10
+Doxycyclin | ATC:J01AA02
+Clindamycin | ATC:J01FF01
+Vancomycin | ATC:J01XA01
+Metronidazol | ATC:J01XD01
+Cotrimoxazol | Trimethoprim-Sulfamethoxazol
+Fluconazol | ATC:J02AC01
+Aciclovir | ATC:J05AB01
+Antibiotikum | Antibiotika; Antibiose; antibiotische Therapie
+Prednisolon | ATC:H02AB06
+Prednison | ATC:H02AB07
+Dexamethason | ATC:H02AB02
+Hydrocortison | ATC:H02AB09
+Methylprednisolon | ATC:H02AB04
+Budesonid
+Kortison | Cortison; Glukokortikoid; Glukokortikoide; Kortikosteroid; Kortikosteroide; Steroide
+Salbutamol | ATC:R03AC02
+Ipratropiumbromid | Ipratropium
+Tiotropium
+Formoterol
+Levothyroxin | L-Thyroxin; Euthyrox; Thyroxin | ATC:H03AA01
+Thiamazol | ATC:H03BB02
+Allopurinol | ATC:M04AA01
+Colchicin | ATC:M04AC01
+Methotrexat | =MTX | ATC:L01BA01
+Diazepam | ATC:N05BA01
+Lorazepam | Tavor | ATC:N05BA06
+Midazolam | Dormicum | ATC:N05CD08
+Zopiclon
+Haloperidol | ATC:N05AD01
+Quetiapin | ATC:N05AH04
+Risperidon | ATC:N05AX08
+Olanzapin | ATC:N05AH03
+Citalopram | ATC:N06AB04
+Sertralin | ATC:N06AB06
+Mirtazapin | ATC:N06AX11
+Amitriptylin | ATC:N06AA09
+Venlafaxin | ATC:N06AX16
+Pregabalin | Lyrica
+Gabapentin
+Levetiracetam | Keppra | ATC:N03AX14
+Valproinsäure | Valproat | ATC:N03AG01
+Lamotrigin | ATC:N03AX09
+Carbamazepin | ATC:N03AF01
+Levodopa | L-Dopa
+Propofol | ATC:N01AX10
+Ketamin | ATC:N01AX03
+Lidocain | ATC:N01BB02
+Adrenalin | Epinephrin
+Noradrenalin | Norepinephrin
+Atropin
+Tranexamsäure | ATC:B02AA02
+Alteplase | rt-PA; Actilyse; =rtPA | ATC:B01AD02
+Tamoxifen | ATC:L02BA01
+Cisplatin
+Paclitaxel
+Rituximab
+Pembrolizumab
+Adalimumab
+Infliximab
+Kontrastmittel | =KM; Kontrastmittels | | Substanz zur Verbesserung der Darstellung von Strukturen in der Bildgebung.
+Gadolinium | Gadolinium-Kontrastmittel; gadoliniumhaltiges Kontrastmittel
+jodhaltiges Kontrastmittel | Jodkontrastmittel; iodhaltiges Kontrastmittel
+Kochsalzlösung | Natriumchlorid; =NaCl; isotone Kochsalzlösung
+Ringer-Lösung | Ringerlösung; Ringer-Laktat
+Sauerstoff | =O2; Sauerstoffgabe
+
+## procedure
+Computertomographie | =CT; Computertomografie; CT-Untersuchung; Computertomogramm | | Schnittbildverfahren mit Röntgenstrahlung.
+CT-Angiographie | =CTA; CT-Angiografie; Angio-CT
+Magnetresonanztomographie | =MRT; Kernspintomographie; =MRI; Magnetresonanztomografie; Kernspintomografie; Kernspin | | Schnittbildverfahren mit Magnetfeldern und Radiowellen.
+MR-Angiographie | =MRA; MR-Angiografie
+Sonographie | Sonografie; Ultraschall; Ultraschalluntersuchung; Sono | | Bildgebung mit Ultraschallwellen.
+Röntgen | Röntgenaufnahme; Röntgenuntersuchung; Röntgenbild
+Röntgen-Thorax | Thoraxröntgen; Rö-Thorax; Röntgenthorax; Thoraxaufnahme
+Mammographie | Mammografie
+Angiographie | Angiografie; =DSA; digitale Subtraktionsangiographie
+PET-CT | PET/CT; Positronen-Emissions-Tomographie; =PET
+Szintigraphie | Szintigrafie; Skelettszintigraphie
+Echokardiographie | Echokardiografie; =TTE; =TEE; Herzecho; Herzultraschall
+Elektrokardiogramm | =EKG
+Koronarangiographie | Herzkatheter; Herzkatheteruntersuchung; Koronarangiografie; =PCI; =PTCA
+Endoskopie
+Gastroskopie | =ÖGD; Magenspiegelung; Ösophagogastroduodenoskopie
+Koloskopie | Darmspiegelung; Coloskopie
+Bronchoskopie
+Biopsie | Probeentnahme; Stanzbiopsie; Probenentnahme
+Punktion | Pleurapunktion; Aszitespunktion
+Lumbalpunktion | Liquorpunktion
+Drainage | Thoraxdrainage; Drainageanlage
+Operation | =OP; operative Versorgung
+Resektion
+Appendektomie
+Cholezystektomie
+Osteosynthese | Plattenosteosynthese
+Endoprothese | =TEP; Hüft-TEP; Knie-TEP; Totalendoprothese; Hüftprothese; Knieprothese
+Stent | Stentimplantation; Stentanlage
+Bypass | Bypass-Operation
+Thrombektomie | mechanische Thrombektomie
+Thrombolyse | Lyse; Lysetherapie
+Dialyse | Hämodialyse
+Chemotherapie
+Strahlentherapie | Bestrahlung; Radiatio; Radiotherapie
+Intubation
+Beatmung | maschinelle Beatmung
+Reanimation | Wiederbelebung
+Transfusion | Bluttransfusion
+Antikoagulation | Blutverdünnung
+Verlaufskontrolle | Kontrolluntersuchung
+Kontrastmittelgabe | KM-Gabe
+Physiotherapie | Krankengymnastik
+Impfung
+Anamnese
+Rekonstruktion | Rekonstruktionen; multiplanare Rekonstruktion; =MPR
+
+## lab
+CRP | C-reaktives Protein
+Leukozyten | Leukos; Leukozytenzahl
+Hämoglobin | =Hb; Hämoglobinwert
+Hämatokrit | =Hkt
+Thrombozyten | Thrombozytenzahl
+Erythrozyten
+Kreatinin | Krea; Serumkreatinin
+glomeruläre Filtrationsrate | =GFR; =eGFR
+Harnstoff
+Natrium
+Kalium
+Calcium | Kalzium
+Blutzucker | Glukose; Glucose; =BZ; Blutglukose
+HbA1c
+Troponin | Troponin T; Troponin I; hs-Troponin
+D-Dimere | D-Dimer
+INR | INR-Wert
+Quick-Wert | =Quick
+PTT | =aPTT
+TSH
+Bilirubin
+GOT | =AST; =ASAT
+GPT | =ALT; =ALAT
+Gamma-GT | =GGT; γ-GT
+Lipase
+LDH | Laktatdehydrogenase
+Kreatinkinase | =CK; CK-MB
+BNP | NT-proBNP
+Procalcitonin | =PCT
+Laktat | Lactat
+PSA | prostataspezifisches Antigen
+Cholesterin | =LDL; =HDL; LDL-Cholesterin; HDL-Cholesterin; Gesamtcholesterin
+Triglyceride | Triglyzeride
+Ferritin
+Albumin
+pH-Wert | =pH
+Blutgasanalyse | =BGA
+Blutbild | kleines Blutbild; Differentialblutbild; großes Blutbild
+Sauerstoffsättigung | =SpO2; O2-Sättigung
+Blutdruck | =RR
+Herzfrequenz | Puls; Pulsfrequenz
+Entzündungsparameter | Entzündungswerte; Infektparameter
+Leberwerte | Transaminasen
+Nierenwerte | Retentionsparameter
+
+## modifier
+regredient | rückläufig; größenregredient | | Befund nimmt im Verlauf ab.
+progredient | fortschreitend; größenprogredient | | Befund nimmt im Verlauf zu.
+größenkonstant | stationär; idem
+akut
+subakut
+chronisch
+unauffällig | regelrecht; altersentsprechend
+pathologisch
+suspekt | malignomsuspekt; metastasenverdächtig; tumorsuspekt
+maligne | bösartig
+benigne | gutartig
+geringgradig | leichtgradig
+mäßiggradig | mittelgradig
+hochgradig | schwergradig
+fokal
+diffus
+multifokal
+disseminiert
+lateral
+medial
+ventral
+dorsal
+kranial
+kaudal
+proximal
+distal
+basal
+apikal
+anterior
+posterior
+posterobasal
+segmental
+subsegmental
+pleuraständig
+hilär
+mediastinal
+pulmonal
+kardial
+hepatisch
+renal
+zerebral
+intrakraniell
+entzündlich
+postoperativ
+posttraumatisch
+degenerativ
+disloziert
+nativ
+kontrastmittelgestützt | KM-gestützt
+axial
+koronar
+sagittal
+T1-gewichtet | =T1
+T2-gewichtet | =T2
+FLAIR
+diffusionsgewichtet | =DWI

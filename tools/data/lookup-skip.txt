@@ -1,0 +1,28 @@
+# Concepts whose term card would show the wrong sense of the word. One "<language> <concept id>"
+# per line; "*" as language applies to all. Checked by tools/build-lookup-cache.ts.
+en radiology:mass
+en radiology:tear
+en radiology:spine
+en radiology:solid
+en radiology:cavity
+en radiology:artifact
+en radiology:stable
+fr radiology:cavity
+fr radiology:washout
+fr radiology:solid
+fr radiology:atypical-pneumonia
+fr radiology:calculus
+de radiology:nodule
+de radiology:air-bronchogram
+en radiology:fracture
+en radiology:dislocation
+en radiology:soft-tissue-swelling
+en radiology:regressive
+en radiology:biliary-dilatation
+de radiology:soft-tissue-swelling
+de radiology:bulla
+de radiology:occlusion
+fr radiology:soft-tissue-swelling
+fr radiology:varices
+fr radiology:regressive
+fr radiology:biliary-dilatation

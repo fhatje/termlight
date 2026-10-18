@@ -1,0 +1,14 @@
+{
+  // Emits the published package (lib/): one .js and .d.ts per source file, see tools/build-lib.ts.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
+}

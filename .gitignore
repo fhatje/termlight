@@ -1,0 +1,8 @@
+node_modules/
+# the published package (npm run build:lib)
+/lib/
+# responses cached by tools/build-lookup-cache.ts
+/tools/.cache/
+*.log
+*.tgz
+.DS_Store

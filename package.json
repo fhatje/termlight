@@ -1,0 +1,83 @@
+{
+  "name": "termlight",
+  "version": "0.1.0",
+  "description": "Embeddable text field for medical reports that recognises medical terms as you write and highlights them like syntax",
+  "license": "MIT",
+  "author": "Favian Hatje",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhatje/termlight.git"
+  },
+  "homepage": "https://github.com/fhatje/termlight#readme",
+  "bugs": {
+    "url": "https://github.com/fhatje/termlight/issues"
+  },
+  "type": "module",
+  "files": [
+    "lib",
+    "public/packs/*.json",
+    "public/lookup/*.json",
+    "docs/*.md"
+  ],
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "termlight-source": "./src/index.ts",
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./core": {
+      "termlight-source": "./src/core/index.ts",
+      "types": "./lib/core/index.d.ts",
+      "default": "./lib/core/index.js"
+    },
+    "./editor": {
+      "termlight-source": "./src/editor/index.ts",
+      "types": "./lib/editor/index.d.ts",
+      "default": "./lib/editor/index.js"
+    },
+    "./providers/*": {
+      "termlight-source": "./src/providers/*/index.ts",
+      "types": "./lib/providers/*/index.d.ts",
+      "default": "./lib/providers/*/index.js"
+    },
+    "./packs/*": "./public/packs/*",
+    "./lookup/*": "./public/lookup/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:lib": "node tools/build-lib.ts",
+    "prepack": "npm run build:lib",
+    "build:seed": "node tools/build-seed.ts",
+    "build:lookup": "node tools/build-lookup-cache.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.14",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "happy-dom": "^20.14.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  },
+  "keywords": [
+    "radiology",
+    "medical",
+    "editor",
+    "text-field",
+    "highlighting",
+    "codemirror",
+    "web-component",
+    "lit"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  }
+}
